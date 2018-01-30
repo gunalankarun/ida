@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */; };
+		435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBED2020E54F00D3EE75 /* FirstViewController.swift */; };
+		435BBBF02020E54F00D3EE75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEF2020E54F00D3EE75 /* SecondViewController.swift */; };
+		435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF12020E54F00D3EE75 /* Main.storyboard */; };
+		435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF42020E54F00D3EE75 /* Assets.xcassets */; };
+		435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */; };
+		435BBC032020E54F00D3EE75 /* IdaDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC022020E54F00D3EE75 /* IdaDashboardTests.swift */; };
+		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		435BBBFF2020E54F00D3EE75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 435BBBE02020E54E00D3EE75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 435BBBE72020E54E00D3EE75;
+			remoteInfo = IdaDashboard;
+		};
+		435BBC0A2020E54F00D3EE75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 435BBBE02020E54E00D3EE75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 435BBBE72020E54E00D3EE75;
+			remoteInfo = IdaDashboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		435BBBE82020E54E00D3EE75 /* IdaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		435BBBED2020E54F00D3EE75 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		435BBBEF2020E54F00D3EE75 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		435BBBF22020E54F00D3EE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		435BBBF42020E54F00D3EE75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		435BBBF72020E54F00D3EE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		435BBBF92020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435BBBFE2020E54F00D3EE75 /* IdaDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdaDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		435BBC022020E54F00D3EE75 /* IdaDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdaDashboardTests.swift; sourceTree = "<group>"; };
+		435BBC042020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435BBC092020E54F00D3EE75 /* IdaDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdaDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdaDashboardUITests.swift; sourceTree = "<group>"; };
+		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		435BBBE52020E54E00D3EE75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435BBBFB2020E54F00D3EE75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435BBC062020E54F00D3EE75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		435BBBDF2020E54E00D3EE75 = {
+			isa = PBXGroup;
+			children = (
+				435BBBEA2020E54E00D3EE75 /* IdaDashboard */,
+				435BBC012020E54F00D3EE75 /* IdaDashboardTests */,
+				435BBC0C2020E54F00D3EE75 /* IdaDashboardUITests */,
+				435BBBE92020E54E00D3EE75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		435BBBE92020E54E00D3EE75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				435BBBE82020E54E00D3EE75 /* IdaDashboard.app */,
+				435BBBFE2020E54F00D3EE75 /* IdaDashboardTests.xctest */,
+				435BBC092020E54F00D3EE75 /* IdaDashboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		435BBBEA2020E54E00D3EE75 /* IdaDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
+				435BBBED2020E54F00D3EE75 /* FirstViewController.swift */,
+				435BBBEF2020E54F00D3EE75 /* SecondViewController.swift */,
+				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
+				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
+				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
+				435BBBF92020E54F00D3EE75 /* Info.plist */,
+			);
+			path = IdaDashboard;
+			sourceTree = "<group>";
+		};
+		435BBC012020E54F00D3EE75 /* IdaDashboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				435BBC022020E54F00D3EE75 /* IdaDashboardTests.swift */,
+				435BBC042020E54F00D3EE75 /* Info.plist */,
+			);
+			path = IdaDashboardTests;
+			sourceTree = "<group>";
+		};
+		435BBC0C2020E54F00D3EE75 /* IdaDashboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */,
+				435BBC0F2020E54F00D3EE75 /* Info.plist */,
+			);
+			path = IdaDashboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		435BBBE72020E54E00D3EE75 /* IdaDashboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435BBC122020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboard" */;
+			buildPhases = (
+				435BBBE42020E54E00D3EE75 /* Sources */,
+				435BBBE52020E54E00D3EE75 /* Frameworks */,
+				435BBBE62020E54E00D3EE75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IdaDashboard;
+			productName = IdaDashboard;
+			productReference = 435BBBE82020E54E00D3EE75 /* IdaDashboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		435BBBFD2020E54F00D3EE75 /* IdaDashboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435BBC152020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboardTests" */;
+			buildPhases = (
+				435BBBFA2020E54F00D3EE75 /* Sources */,
+				435BBBFB2020E54F00D3EE75 /* Frameworks */,
+				435BBBFC2020E54F00D3EE75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				435BBC002020E54F00D3EE75 /* PBXTargetDependency */,
+			);
+			name = IdaDashboardTests;
+			productName = IdaDashboardTests;
+			productReference = 435BBBFE2020E54F00D3EE75 /* IdaDashboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		435BBC082020E54F00D3EE75 /* IdaDashboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435BBC182020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboardUITests" */;
+			buildPhases = (
+				435BBC052020E54F00D3EE75 /* Sources */,
+				435BBC062020E54F00D3EE75 /* Frameworks */,
+				435BBC072020E54F00D3EE75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				435BBC0B2020E54F00D3EE75 /* PBXTargetDependency */,
+			);
+			name = IdaDashboardUITests;
+			productName = IdaDashboardUITests;
+			productReference = 435BBC092020E54F00D3EE75 /* IdaDashboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		435BBBE02020E54E00D3EE75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Ida;
+				TargetAttributes = {
+					435BBBE72020E54E00D3EE75 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					435BBBFD2020E54F00D3EE75 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 435BBBE72020E54E00D3EE75;
+					};
+					435BBC082020E54F00D3EE75 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 435BBBE72020E54E00D3EE75;
+					};
+				};
+			};
+			buildConfigurationList = 435BBBE32020E54E00D3EE75 /* Build configuration list for PBXProject "IdaDashboard" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 435BBBDF2020E54E00D3EE75;
+			productRefGroup = 435BBBE92020E54E00D3EE75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				435BBBE72020E54E00D3EE75 /* IdaDashboard */,
+				435BBBFD2020E54F00D3EE75 /* IdaDashboardTests */,
+				435BBC082020E54F00D3EE75 /* IdaDashboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		435BBBE62020E54E00D3EE75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */,
+				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
+				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435BBBFC2020E54F00D3EE75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435BBC072020E54F00D3EE75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		435BBBE42020E54E00D3EE75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435BBBF02020E54F00D3EE75 /* SecondViewController.swift in Sources */,
+				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
+				435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435BBBFA2020E54F00D3EE75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435BBC032020E54F00D3EE75 /* IdaDashboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435BBC052020E54F00D3EE75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		435BBC002020E54F00D3EE75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 435BBBE72020E54E00D3EE75 /* IdaDashboard */;
+			targetProxy = 435BBBFF2020E54F00D3EE75 /* PBXContainerItemProxy */;
+		};
+		435BBC0B2020E54F00D3EE75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 435BBBE72020E54E00D3EE75 /* IdaDashboard */;
+			targetProxy = 435BBC0A2020E54F00D3EE75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		435BBBF12020E54F00D3EE75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				435BBBF22020E54F00D3EE75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				435BBBF72020E54F00D3EE75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		435BBC102020E54F00D3EE75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		435BBC112020E54F00D3EE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		435BBC132020E54F00D3EE75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IdaDashboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		435BBC142020E54F00D3EE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IdaDashboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		435BBC162020E54F00D3EE75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IdaDashboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdaDashboard.app/IdaDashboard";
+			};
+			name = Debug;
+		};
+		435BBC172020E54F00D3EE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IdaDashboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdaDashboard.app/IdaDashboard";
+			};
+			name = Release;
+		};
+		435BBC192020E54F00D3EE75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IdaDashboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IdaDashboard;
+			};
+			name = Debug;
+		};
+		435BBC1A2020E54F00D3EE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IdaDashboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IdaDashboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		435BBBE32020E54E00D3EE75 /* Build configuration list for PBXProject "IdaDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435BBC102020E54F00D3EE75 /* Debug */,
+				435BBC112020E54F00D3EE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435BBC122020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435BBC132020E54F00D3EE75 /* Debug */,
+				435BBC142020E54F00D3EE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435BBC152020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435BBC162020E54F00D3EE75 /* Debug */,
+				435BBC172020E54F00D3EE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435BBC182020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435BBC192020E54F00D3EE75 /* Debug */,
+				435BBC1A2020E54F00D3EE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 435BBBE02020E54E00D3EE75 /* Project object */;
+}
