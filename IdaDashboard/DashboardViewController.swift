@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  DashboardViewController.swift
 //  IdaDashboard
 //
 //  Created by Gunalan Karun on 1/30/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

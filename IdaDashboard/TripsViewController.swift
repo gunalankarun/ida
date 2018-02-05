@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  TripsViewController.swift
 //  IdaDashboard
 //
 //  Created by Gunalan Karun on 1/30/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TripsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
