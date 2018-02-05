@@ -13,7 +13,7 @@
         <!--Dashboard-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="DashboardViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,7 +130,7 @@
         <!--Account-->
         <scene sceneID="qkc-VL-Hqp">
             <objects>
-                <viewController id="1fY-dA-Dot" sceneMemberID="viewController">
+                <viewController id="1fY-dA-Dot" customClass="AccountViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLC-js-rj5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +156,7 @@
         <!--Bluetooth Test-->
         <scene sceneID="0cR-kY-A18">
             <objects>
-                <viewController id="Ss0-9j-kQ5" sceneMemberID="viewController">
+                <viewController id="Ss0-9j-kQ5" customClass="BluetoothViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CI2-fv-Pcm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
