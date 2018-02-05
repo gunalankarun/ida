@@ -11,7 +11,7 @@ import UIKit
 class TripTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var tripLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var mpgLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     

@@ -17,6 +17,7 @@
 		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
 		E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F882029002100BF80B5 /* TripTableViewCell.swift */; };
 		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
+		E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4526F882029002100BF80B5 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				435BBBED2020E54F00D3EE75 /* FirstViewController.swift */,
 				435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */,
+				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
@@ -270,6 +273,7 @@
 			files = (
 				E4526F8B2029022400BF80B5 /* Trip.swift in Sources */,
 				E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */,
+				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
 				435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
 				435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */,
