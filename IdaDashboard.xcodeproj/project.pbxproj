@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		430393442028F6B7009E16E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430393432028F6B7009E16E4 /* AccountViewController.swift */; };
-		430393462028F7AB009E16E4 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430393452028F7AB009E16E4 /* BluetoothViewController.swift */; };
 		435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */; };
-		435BBBEE2020E54F00D3EE75 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBED2020E54F00D3EE75 /* DashboardViewController.swift */; };
+		435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBED2020E54F00D3EE75 /* FirstViewController.swift */; };
 		435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */; };
 		435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF12020E54F00D3EE75 /* Main.storyboard */; };
 		435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF42020E54F00D3EE75 /* Assets.xcassets */; };
 		435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */; };
 		435BBC032020E54F00D3EE75 /* IdaDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC022020E54F00D3EE75 /* IdaDashboardTests.swift */; };
 		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
+		E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F882029002100BF80B5 /* TripTableViewCell.swift */; };
+		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		430393432028F6B7009E16E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		430393452028F7AB009E16E4 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		435BBBE82020E54E00D3EE75 /* IdaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		435BBBED2020E54F00D3EE75 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		435BBBED2020E54F00D3EE75 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		435BBBF22020E54F00D3EE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		435BBBF42020E54F00D3EE75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		435BBC092020E54F00D3EE75 /* IdaDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdaDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdaDashboardUITests.swift; sourceTree = "<group>"; };
 		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4526F882029002100BF80B5 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
-				435BBBED2020E54F00D3EE75 /* DashboardViewController.swift */,
+				435BBBED2020E54F00D3EE75 /* FirstViewController.swift */,
 				435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */,
-				430393432028F6B7009E16E4 /* AccountViewController.swift */,
+				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
+				E4526F8A2029022400BF80B5 /* Trip.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
 				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
-				430393452028F7AB009E16E4 /* BluetoothViewController.swift */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -268,11 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4526F8B2029022400BF80B5 /* Trip.swift in Sources */,
+				E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */,
 				435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
-				430393462028F7AB009E16E4 /* BluetoothViewController.swift in Sources */,
-				430393442028F6B7009E16E4 /* AccountViewController.swift in Sources */,
-				435BBBEE2020E54F00D3EE75 /* DashboardViewController.swift in Sources */,
+				435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

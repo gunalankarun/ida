@@ -1,5 +1,5 @@
 //
-//  TripsViewController.swift
+//  TripTableViewController.swift
 //  IdaDashboard
 //
 //  Created by Gunalan Karun on 1/30/18.
