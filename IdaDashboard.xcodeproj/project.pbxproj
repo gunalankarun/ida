@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */; };
-		435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBED2020E54F00D3EE75 /* FirstViewController.swift */; };
 		435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */; };
 		435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF12020E54F00D3EE75 /* Main.storyboard */; };
 		435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF42020E54F00D3EE75 /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		435BBBE82020E54E00D3EE75 /* IdaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		435BBBED2020E54F00D3EE75 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		435BBBF22020E54F00D3EE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		435BBBF42020E54F00D3EE75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
-				435BBBED2020E54F00D3EE75 /* FirstViewController.swift */,
 				435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */,
 				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
@@ -276,7 +273,6 @@
 				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
 				435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
-				435BBBEE2020E54F00D3EE75 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
