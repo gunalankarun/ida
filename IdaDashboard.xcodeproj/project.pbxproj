@@ -20,6 +20,7 @@
 		E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F882029002100BF80B5 /* TripTableViewCell.swift */; };
 		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
 		E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableViewController.swift */; };
+		E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E4526F882029002100BF80B5 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
+		E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,17 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
+				E4526F8A2029022400BF80B5 /* Trip.swift */,
 				435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */,
 				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
-				E4526F8A2029022400BF80B5 /* Trip.swift */,
+				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
+				43039347202913D1009E16E4 /* DashboardViewController.swift */,
+				4303934920291423009E16E4 /* AccountViewController.swift */,
+				4303934B2029144B009E16E4 /* BluetoothViewController.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
 				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
-				43039347202913D1009E16E4 /* DashboardViewController.swift */,
-				4303934920291423009E16E4 /* AccountViewController.swift */,
-				4303934B2029144B009E16E4 /* BluetoothViewController.swift */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */,
 				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
 				4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */,
+				E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */,
 				435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
 			);

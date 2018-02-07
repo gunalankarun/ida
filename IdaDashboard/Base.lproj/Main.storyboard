@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gzg-ny-Z83">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -112,20 +112,39 @@
             </objects>
             <point key="canvasLocation" x="1632.8" y="357.57121439280365"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip Detail View Controller-->
         <scene sceneID="gXm-Wy-ayE">
             <objects>
-                <viewController id="Gzg-ny-Z83" sceneMemberID="viewController">
+                <viewController id="Gzg-ny-Z83" customClass="TripDetailViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szA-Cp-YX2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-I8-SEj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-6e-Vjs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                    </mapView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-Sa-H5N">
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                    </scrollView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m7j-si-K72" firstAttribute="trailing" secondItem="8IQ-I8-SEj" secondAttribute="trailing" id="HF7-bg-Lbm"/>
+                            <constraint firstItem="8IQ-I8-SEj" firstAttribute="top" secondItem="m7j-si-K72" secondAttribute="top" id="eHB-SX-RJa"/>
+                            <constraint firstItem="8IQ-I8-SEj" firstAttribute="leading" secondItem="m7j-si-K72" secondAttribute="leading" id="nYd-Ok-rqS"/>
+                            <constraint firstItem="m7j-si-K72" firstAttribute="bottom" secondItem="8IQ-I8-SEj" secondAttribute="bottom" id="rLm-nC-Zrd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m7j-si-K72"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGz-4o-JBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631" y="358"/>
+            <point key="canvasLocation" x="2487.1999999999998" y="357.57121439280365"/>
         </scene>
         <!--Account-->
         <scene sceneID="qkc-VL-Hqp">
