@@ -17,6 +17,8 @@
 		435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */; };
 		435BBC032020E54F00D3EE75 /* IdaDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC022020E54F00D3EE75 /* IdaDashboardTests.swift */; };
 		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
+		4394359920321A4D00433495 /* SimpleBluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359820321A4D00433495 /* SimpleBluetoothIO.swift */; };
+		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F882029002100BF80B5 /* TripTableViewCell.swift */; };
 		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
 		E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableViewController.swift */; };
@@ -57,6 +59,8 @@
 		435BBC092020E54F00D3EE75 /* IdaDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdaDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdaDashboardUITests.swift; sourceTree = "<group>"; };
 		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4394359820321A4D00433495 /* SimpleBluetoothIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBluetoothIO.swift; sourceTree = "<group>"; };
+		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		E4526F882029002100BF80B5 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
 				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
+				4394359820321A4D00433495 /* SimpleBluetoothIO.swift */,
+				4394359A20321A9C00433495 /* BTData.swift */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -284,8 +290,10 @@
 				43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */,
 				4303934A20291423009E16E4 /* AccountViewController.swift in Sources */,
 				E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */,
+				4394359B20321A9C00433495 /* BTData.swift in Sources */,
 				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
 				4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */,
+				4394359920321A4D00433495 /* SimpleBluetoothIO.swift in Sources */,
 				E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */,
 				435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
