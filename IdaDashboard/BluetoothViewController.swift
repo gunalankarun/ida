@@ -9,27 +9,26 @@
 import UIKit
 
 class BluetoothViewController: UIViewController {
+    var simpleBluetoothIO: SimpleBluetoothIO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        simpleBluetoothIO = SimpleBluetoothIO(serviceUUID: "19B10010-E8F2-537E-4F6C-D104768A1214", delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension BluetoothViewController: SimpleBluetoothIODelegate {
+    func simpleBluetoothIO(simpleBluetoothIO: SimpleBluetoothIO, didReceiveValue value: Int8) {
+        if value > 0 {
+            view.backgroundColor = UIColor.yellow
+        } else {
+            view.backgroundColor = UIColor.black
+        }
     }
-    */
-
 }
