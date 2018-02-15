@@ -9,12 +9,12 @@
 import UIKit
 
 class BluetoothViewController: UIViewController {
-    var simpleBluetoothIO: SimpleBluetoothIO!
+    var bluetoothIO: BluetoothIO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        simpleBluetoothIO = SimpleBluetoothIO(serviceUUID: "19B10010-E8F2-537E-4F6C-D104768A1214", delegate: self)
+        bluetoothIO = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2", delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,8 +23,9 @@ class BluetoothViewController: UIViewController {
 
 }
 
-extension BluetoothViewController: SimpleBluetoothIODelegate {
-    func simpleBluetoothIO(simpleBluetoothIO: SimpleBluetoothIO, didReceiveValue value: Int8) {
+extension BluetoothViewController: BluetoothIODelegate {
+    func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
+        print(value)
         if value > 0 {
             view.backgroundColor = UIColor.yellow
         } else {

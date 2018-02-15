@@ -1,19 +1,20 @@
 import CoreBluetooth
 
-protocol SimpleBluetoothIODelegate: class {
-    func simpleBluetoothIO(simpleBluetoothIO: SimpleBluetoothIO, didReceiveValue value: Int8)
+protocol BluetoothIODelegate: class {
+    func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8)
 }
 
-class SimpleBluetoothIO: NSObject {
+class BluetoothIO: NSObject {
     let serviceUUID: String
-    weak var delegate: SimpleBluetoothIODelegate?
+    weak var delegate: BluetoothIODelegate?
     
     var centralManager: CBCentralManager!
     var connectedPeripheral: CBPeripheral?
     var targetService: CBService?
     var writableCharacteristic: CBCharacteristic?
     
-    init(serviceUUID: String, delegate: SimpleBluetoothIODelegate?) {
+    init(serviceUUID: String, delegate: BluetoothIODelegate?) {
+        print("Initializing Bluetooth Manager...")
         self.serviceUUID = serviceUUID
         self.delegate = delegate
         
@@ -33,30 +34,35 @@ class SimpleBluetoothIO: NSObject {
     
 }
 
-extension SimpleBluetoothIO: CBCentralManagerDelegate {
+extension BluetoothIO: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        print("Discovering Services...")
         peripheral.discoverServices(nil)
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        print("Connecting to Peripheral Device...")
         connectedPeripheral = peripheral
         
         if let connectedPeripheral = connectedPeripheral {
             connectedPeripheral.delegate = self
             centralManager.connect(connectedPeripheral, options: nil)
+            print("Connected to Peripheral Device.")
         }
         centralManager.stopScan()
     }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
+            print("Scanning for Peripheral Device...")
             centralManager.scanForPeripherals(withServices: [CBUUID(string: serviceUUID)], options: nil)
         }
     }
 }
 
-extension SimpleBluetoothIO: CBPeripheralDelegate {
+extension BluetoothIO: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        print("Discovering Characteristics...")
         guard let services = peripheral.services else {
             return
         }
@@ -73,6 +79,8 @@ extension SimpleBluetoothIO: CBPeripheralDelegate {
             return
         }
         
+        print("Subscribing to characteristic...")
+        
         for characteristic in characteristics {
             if characteristic.properties.contains(.write) || characteristic.properties.contains(.writeWithoutResponse) {
                 writableCharacteristic = characteristic
@@ -86,6 +94,6 @@ extension SimpleBluetoothIO: CBPeripheralDelegate {
             return
         }
         
-        delegate.simpleBluetoothIO(simpleBluetoothIO: self, didReceiveValue: data.int8Value())
+        delegate.bluetoothIO(bluetoothIO: self, didReceiveValue: data.int8Value())
     }
 }
