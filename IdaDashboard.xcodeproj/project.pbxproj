@@ -19,6 +19,9 @@
 		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
+		E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11BE203E238B007D5751 /* Dashboard.storyboard */; };
+		E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C1203E23C8007D5751 /* Trips.storyboard */; };
+		E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C4203E23FC007D5751 /* Account.storyboard */; };
 		E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F882029002100BF80B5 /* TripTableViewCell.swift */; };
 		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
 		E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableViewController.swift */; };
@@ -61,6 +64,9 @@
 		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
+		E42A11BF203E238B007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
+		E42A11C2203E23C8007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trips.storyboard; sourceTree = "<group>"; };
+		E42A11C5203E23FC007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
 		E4526F882029002100BF80B5 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 				4303934920291423009E16E4 /* AccountViewController.swift */,
 				4303934B2029144B009E16E4 /* BluetoothViewController.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
+				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
+				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
+				E42A11C4203E23FC007D5751 /* Account.storyboard */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
 				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
@@ -261,7 +270,10 @@
 			files = (
 				435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */,
 				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
+				E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
+				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
+				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +358,30 @@
 				435BBBF72020E54F00D3EE75 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E42A11BE203E238B007D5751 /* Dashboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E42A11BF203E238B007D5751 /* Base */,
+			);
+			name = Dashboard.storyboard;
+			sourceTree = "<group>";
+		};
+		E42A11C1203E23C8007D5751 /* Trips.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E42A11C2203E23C8007D5751 /* Base */,
+			);
+			name = Trips.storyboard;
+			sourceTree = "<group>";
+		};
+		E42A11C4203E23FC007D5751 /* Account.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E42A11C5203E23FC007D5751 /* Base */,
+			);
+			name = Account.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
