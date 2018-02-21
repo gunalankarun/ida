@@ -10,10 +10,28 @@ import UIKit
 
 class TripDetailViewController: UIViewController {
 
+    // MARK: Properties
+    @IBOutlet weak var tripScoreLabel: UILabel!
+    @IBOutlet weak var tripDistanceLabel: UILabel!
+    @IBOutlet weak var tripCostLabel: UILabel!
+    
+    /*
+     This value is either passed by `TripTableViewController` in `prepare(for:sender:)`
+     or constructed as part of adding a new meal.
+     */
+    var trip: Trip?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set up views if editing an existing Meal.
+        if let trip = trip {
+            tripScoreLabel.text   = String(trip.score)
+            tripDistanceLabel.text = String(trip.distance)
+            tripCostLabel.text = "$" + String(trip.cost)
+        } else {
+            fatalError("Displaying TripDetail without backing information")
+        }
     }
 
     override func didReceiveMemoryWarning() {

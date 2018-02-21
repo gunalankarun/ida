@@ -15,9 +15,12 @@ class Trip {
     var end: Date
     var mpg: Double
     var score: Int
+    var distance: Double
+    var cost: Double
     
     // MARK: Initialization
-    init?(title: String, start: Date, end: Date, mpg: Double, score: Int) {
+    init?(title: String, start: Date, end: Date, mpg: Double, score: Int,
+          distance: Double, cost: Double) {
         // Title must not be empty
         guard !title.isEmpty else {
             return nil
@@ -34,6 +37,14 @@ class Trip {
         guard score >= 0 && score <= 100 else {
             return nil
         }
+        // Cost must be nonnegative
+        guard cost >= 0 else {
+            return nil
+        }
+        // Distance must be nonnegative
+        guard distance >= 0 else {
+            return nil
+        }
         
         // Initialize properties
         self.title = title
@@ -41,5 +52,7 @@ class Trip {
         self.end = end
         self.mpg = mpg
         self.score = score
+        self.distance = distance
+        self.cost = cost
     }
 }

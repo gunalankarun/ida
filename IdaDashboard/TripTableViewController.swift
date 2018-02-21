@@ -94,15 +94,30 @@ class TripTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        switch(segue.identifier ?? "") {
+        case "ShowTripDetail":
+            guard let tripDetailViewController = segue.destination as? TripDetailViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedTripCell = sender as? TripTableViewCell else {
+                fatalError("Unexpected sender: \(sender ?? "")")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedTripCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedTrip = trips[indexPath.row]
+            tripDetailViewController.trip = selectedTrip
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier ?? "")")
+        }
     }
-    */
 
     // MARK: Private Methods
     // Load sample data for demonstration purposes
@@ -111,21 +126,27 @@ class TripTableViewController: UITableViewController {
                                start: Date(timeIntervalSinceNow: -1000),
                                end: Date(timeIntervalSinceNow: -900),
                                mpg: 19.2,
-                               score: 90) else {
+                               score: 90,
+                               distance: 28.3,
+                               cost: 4.32) else {
             fatalError("Unable to instantiate trip1")
         }
         guard let trip2 = Trip(title: "Taco Joint to EER",
                                start: Date(timeIntervalSinceNow: -800),
                                end: Date(timeIntervalSinceNow: -700),
                                mpg: 29.2,
-                               score: 75) else {
+                               score: 75,
+                               distance: 192.3,
+                               cost: 1.23) else {
             fatalError("Unable to insantiate trip2")
         }
         guard let trip3 = Trip(title: "UT to Home",
                                start: Date(timeIntervalSinceNow: -600),
                                end: Date(timeIntervalSinceNow: -500),
                                mpg: 40.2,
-                               score: 86) else {
+                               score: 86,
+                               distance: 1.32,
+                               cost: 0.32) else {
             fatalError("Unable to insantiate trip3")
         }
         
