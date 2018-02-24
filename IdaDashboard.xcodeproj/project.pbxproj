@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38EF9019204209F70099DBD7 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */; };
 		43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43039347202913D1009E16E4 /* DashboardViewController.swift */; };
 		4303934A20291423009E16E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934920291423009E16E4 /* AccountViewController.swift */; };
 		4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934B2029144B009E16E4 /* BluetoothViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		43039347202913D1009E16E4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4303934920291423009E16E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4303934B2029144B009E16E4 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
@@ -128,12 +130,13 @@
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
 				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
 				43039347202913D1009E16E4 /* DashboardViewController.swift */,
-				4303934920291423009E16E4 /* AccountViewController.swift */,
 				4303934B2029144B009E16E4 /* BluetoothViewController.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
 				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
 				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
 				E42A11C4203E23FC007D5751 /* Account.storyboard */,
+				4303934920291423009E16E4 /* AccountViewController.swift */,
+				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
 				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EF9019204209F70099DBD7 /* CreateAccountViewController.swift in Sources */,
 				E4526F8B2029022400BF80B5 /* Trip.swift in Sources */,
 				43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */,
 				4394359D20354D8800433495 /* BluetoothIO.swift in Sources */,
