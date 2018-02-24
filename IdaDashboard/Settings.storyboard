@@ -12,7 +12,7 @@
         <!--Settings-->
         <scene sceneID="dTv-h2-V8f">
             <objects>
-                <tableViewController id="aSE-yU-wY0" sceneMemberID="viewController">
+                <tableViewController id="aSE-yU-wY0" customClass="SettingsViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qTr-a6-3bF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="343.19999999999999" y="-312.59370314842579"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Update Account Information-->
         <scene sceneID="aLe-90-kDz">
             <objects>
-                <tableViewController id="aAb-2Z-GeP" sceneMemberID="viewController">
+                <tableViewController title="Update Account Information" id="aAb-2Z-GeP" customClass="UpdateAccountInfoViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="XiT-QC-JGE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYe-II-Gr3">
-                                                    <rect key="frame" x="139" y="7" width="112" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="112" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -232,7 +232,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zw-Pl-Yo6">
-                                                    <rect key="frame" x="139" y="7" width="109" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="109" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -253,7 +253,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="APZ-bt-VKv">
-                                                    <rect key="frame" x="139" y="7" width="136" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="136" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -274,9 +274,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMB-vp-Xea">
-                                                    <rect key="frame" x="90" y="7" width="194" height="30"/>
+                                                    <rect key="frame" x="162" y="7" width="51" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Update Account Information"/>
+                                                    <state key="normal" title="Update"/>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -289,7 +289,7 @@
                             <outlet property="delegate" destination="aAb-2Z-GeP" id="V8P-TL-f5B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hGH-sb-HEj"/>
+                    <navigationItem key="navigationItem" title="Update Account Info" id="hGH-sb-HEj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBY-fv-n2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,6 +302,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bkb-dM-FKj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

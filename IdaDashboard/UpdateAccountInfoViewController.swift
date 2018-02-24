@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  UpdateAccountInfoViewController.swift
 //  IdaDashboard
 //
 //  Created by Gunalan Karun on 2/24/18.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
-    
+class UpdateAccountInfoViewController: UITableViewController {
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.statusBarStyle = .lightContent
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
