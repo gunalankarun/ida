@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1fY-dA-Dot">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N19-Nf-2k9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="euP-sS-McB">
+            <objects>
+                <viewController id="N19-Nf-2k9" customClass="SplashViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZOt-N0-LFo" customClass="Splash">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-Ft-oC2">
+                                <rect key="frame" x="92" y="261" width="236" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="lTA-V7-qNI"/>
+                    </view>
+                    <connections>
+                        <segue destination="1fY-dA-Dot" kind="modal" identifier="splashSeg" id="mxo-fr-nD6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0I-yX-xUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311.19999999999999" y="1130.2848575712144"/>
+        </scene>
         <!--Account-->
         <scene sceneID="qkc-VL-Hqp">
             <objects>
@@ -79,8 +103,8 @@
                         <outlet property="feedbackTextField" destination="Si2-FO-5s8" id="2Se-1D-2s4"/>
                         <outlet property="passwordTextField" destination="uZq-3a-MpS" id="gv1-dk-qoa"/>
                         <outlet property="usernameTextField" destination="Sj7-Su-awl" id="imB-jH-d2h"/>
-                        <segue destination="nlq-Hm-jfA" kind="modal" identifier="loginSeg" id="dfe-Ps-UTw"/>
                         <segue destination="tCI-02-pt8" kind="modal" identifier="createAccountSeg" id="gXE-GZ-783"/>
+                        <segue destination="tLz-Sa-OeT" kind="modal" identifier="loginSeg" id="AlJ-nN-cNO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2O-ff-JYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,42 +163,27 @@
                         <outlet property="passwordTextField" destination="j33-2n-KLv" id="H7M-tM-7qj"/>
                         <outlet property="retypePasswordTextField" destination="0jL-x2-l31" id="xks-sO-IFR"/>
                         <outlet property="usernameTextField" destination="KTx-J1-nf0" id="NOi-NZ-kqT"/>
-                        <segue destination="nlq-Hm-jfA" kind="modal" identifier="createAccountLoginSeg" id="WkO-Vt-33s"/>
+                        <segue destination="tLz-Sa-OeT" kind="modal" identifier="createAccountLoginSeg" id="2M6-u5-AjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFW-OG-rlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1997.5999999999999" y="939.58020989505258"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Dr8-TT-8Gq">
+        <!--Main-->
+        <scene sceneID="VXK-ZH-EeW">
             <objects>
-                <viewController id="nlq-Hm-jfA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2q9-rE-muT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00w-Rf-lUb">
-                                <rect key="frame" x="166" y="262" width="98" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="4Ov-3v-sFG"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kcR-By-ZVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" id="tLz-Sa-OeT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixF-DI-ADj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1997.5999999999999" y="1617.8410794602701"/>
+            <point key="canvasLocation" x="1975" y="1511"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="logo" width="180" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dfe-Ps-UTw"/>
+        <segue reference="AlJ-nN-cNO"/>
     </inferredMetricsTieBreakers>
 </document>
