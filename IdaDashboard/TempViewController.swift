@@ -25,7 +25,6 @@ class TempViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -38,6 +37,6 @@ class TempViewController: UIViewController {
     */
 
     @IBAction func tripEnded(unwindSegue: UIStoryboardSegue) {
-        
+
     }
 }

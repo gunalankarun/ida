@@ -33,17 +33,22 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        //manager.delegate = self
+        //manager.desiredAccuracy = kCLLocationAccuracyBest
+        //manager.requestWhenInUseAuthorization()
+        //manager.startUpdatingLocation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     /*
     // MARK: - Navigation
@@ -52,10 +57,28 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
 
-    @IBAction func endTrip(_ sender: UIButton) {
-        performSegue(withIdentifier: "endTrip", sender: self)
+    }
+ */
+    
+    @IBAction func endTrip(_ sender: Any) {
+        let alert = UIAlertController(title: "End Trip", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.actionSheet)
+        alert.addAction(UIAlertAction(title:"Save", style: UIAlertActionStyle.default) { _ in
+            self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
+        })
+        alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
+            self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
+        })
+        alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
+        self.present(alert, animated: true)
+    }
+    
+    private func createAlert (title: String, message: String) {
+        let alert = UIAlertController(title:title, message:message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: {(action) in
+            alert.dismiss(animated:true, completion: nil)
+        }))
+        
+        self.present(alert, animated:true, completion: nil)
     }
 }
