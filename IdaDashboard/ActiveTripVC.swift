@@ -9,10 +9,10 @@
 import UIKit
 import MapKit
 import CoreLocation
+import os.log
 
 class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var mph: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     let manager = CLLocationManager()
@@ -28,8 +28,6 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(region, animated: true)
         
         self.mapView.showsUserLocation = true
-        
-        mph.text = "\(location.speed)"
     }
     
     override func viewDidLoad() {
@@ -46,7 +44,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -57,4 +55,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     }
     */
 
+    @IBAction func endTrip(_ sender: UIButton) {
+        performSegue(withIdentifier: "endTrip", sender: self)
+    }
 }
