@@ -50,6 +50,7 @@
                         <segue destination="2YR-PR-dDt" kind="relationship" relationship="viewControllers" id="i7p-j1-GUT"/>
                         <segue destination="HFo-pf-dsh" kind="relationship" relationship="viewControllers" id="4Ig-Jb-0pN"/>
                         <segue destination="Ss0-9j-kQ5" kind="relationship" relationship="viewControllers" id="oQW-sn-m3h"/>
+                        <segue destination="X5z-WG-HZN" kind="relationship" relationship="viewControllers" id="fDU-Y8-C3d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -79,12 +80,22 @@
         <!--Account-->
         <scene sceneID="Zcu-fl-Ic7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Account" id="HFo-pf-dsh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Account" id="HFo-pf-dsh" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ObX-uT-3ej"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08H-5w-sy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-318" y="445"/>
+        </scene>
+        <!--ActiveTrip-->
+        <scene sceneID="K27-4o-y9J">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ActiveTrip" id="X5z-WG-HZN" colorLabel="IBBuiltInLabel-Blue" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EaX-Z0-m6D"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2J-H0-NPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="525"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290D064A2043658300CCD8F6 /* ActiveTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290D06492043658300CCD8F6 /* ActiveTrip.storyboard */; };
+		290D064D2043822C00CCD8F6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290D064C2043822C00CCD8F6 /* CoreLocation.framework */; };
+		290D064F204382EB00CCD8F6 /* ActiveTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */; };
 		43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43039347202913D1009E16E4 /* DashboardViewController.swift */; };
 		4303934A20291423009E16E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934920291423009E16E4 /* AccountViewController.swift */; };
 		4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934B2029144B009E16E4 /* BluetoothViewController.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290D06492043658300CCD8F6 /* ActiveTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActiveTrip.storyboard; sourceTree = "<group>"; };
+		290D064C2043822C00CCD8F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTripVC.swift; sourceTree = "<group>"; };
 		43039347202913D1009E16E4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4303934920291423009E16E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4303934B2029144B009E16E4 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290D064D2043822C00CCD8F6 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290D064B2043822C00CCD8F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				290D064C2043822C00CCD8F6 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		435BBBDF2020E54E00D3EE75 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +120,7 @@
 				435BBC012020E54F00D3EE75 /* IdaDashboardTests */,
 				435BBC0C2020E54F00D3EE75 /* IdaDashboardUITests */,
 				435BBBE92020E54E00D3EE75 /* Products */,
+				290D064B2043822C00CCD8F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,11 +140,13 @@
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
 				435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */,
+				290D06492043658300CCD8F6 /* ActiveTrip.storyboard */,
 				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
 				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
 				43039347202913D1009E16E4 /* DashboardViewController.swift */,
 				4303934920291423009E16E4 /* AccountViewController.swift */,
+				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
 				4303934B2029144B009E16E4 /* BluetoothViewController.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
 				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
@@ -272,6 +290,7 @@
 				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
 				E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
+				290D064A2043658300CCD8F6 /* ActiveTrip.storyboard in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
 				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,
 			);
@@ -299,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4526F8B2029022400BF80B5 /* Trip.swift in Sources */,
+				290D064F204382EB00CCD8F6 /* ActiveTripVC.swift in Sources */,
 				43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */,
 				4394359D20354D8800433495 /* BluetoothIO.swift in Sources */,
 				4303934A20291423009E16E4 /* AccountViewController.swift in Sources */,
