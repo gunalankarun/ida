@@ -32,4 +32,12 @@ class DashboardViewController: UIViewController {
     }
     */
 
+    // MARK: - UI Actions
+    @IBAction func startTrip(_ sender: UIButton) {
+        performSegue(withIdentifier: "toActiveTrip", sender: self)
+    }
+    
+    @IBAction func tripEnded(_ sender: UIStoryboardSegue) {
+        
+    }
 }

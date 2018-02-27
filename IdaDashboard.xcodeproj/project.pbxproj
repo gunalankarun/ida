@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		290D064A2043658300CCD8F6 /* ActiveTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290D06492043658300CCD8F6 /* ActiveTrip.storyboard */; };
 		290D064D2043822C00CCD8F6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290D064C2043822C00CCD8F6 /* CoreLocation.framework */; };
 		290D064F204382EB00CCD8F6 /* ActiveTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */; };
-		29D5AD722043E4720042C6AA /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D5AD712043E4720042C6AA /* TempViewController.swift */; };
+		292DA457204476BD00722F5E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292DA456204476BD00722F5E /* MapKit.framework */; };
+		292DA4592044772A00722F5E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DA4582044772A00722F5E /* LocationManager.swift */; };
 		43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43039347202913D1009E16E4 /* DashboardViewController.swift */; };
 		4303934A20291423009E16E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934920291423009E16E4 /* AccountViewController.swift */; };
 		4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934B2029144B009E16E4 /* BluetoothViewController.swift */; };
@@ -50,10 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		290D06492043658300CCD8F6 /* ActiveTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActiveTrip.storyboard; sourceTree = "<group>"; };
 		290D064C2043822C00CCD8F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTripVC.swift; sourceTree = "<group>"; };
-		29D5AD712043E4720042C6AA /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		292DA456204476BD00722F5E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		292DA4582044772A00722F5E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		43039347202913D1009E16E4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4303934920291423009E16E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4303934B2029144B009E16E4 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292DA457204476BD00722F5E /* MapKit.framework in Frameworks */,
 				290D064D2043822C00CCD8F6 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +111,7 @@
 		290D064B2043822C00CCD8F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				292DA456204476BD00722F5E /* MapKit.framework */,
 				290D064C2043822C00CCD8F6 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -142,8 +144,6 @@
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
 				435BBBEF2020E54F00D3EE75 /* TripsViewController.swift */,
-				290D06492043658300CCD8F6 /* ActiveTrip.storyboard */,
-				29D5AD712043E4720042C6AA /* TempViewController.swift */,
 				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
 				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
@@ -160,6 +160,7 @@
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
 				4394359C20354D8800433495 /* BluetoothIO.swift */,
 				4394359A20321A9C00433495 /* BTData.swift */,
+				292DA4582044772A00722F5E /* LocationManager.swift */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -251,6 +252,14 @@
 					435BBBE72020E54E00D3EE75 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					435BBBFD2020E54F00D3EE75 = {
 						CreatedOnToolsVersion = 9.2;
@@ -293,7 +302,6 @@
 				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
 				E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
-				290D064A2043658300CCD8F6 /* ActiveTrip.storyboard in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
 				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,
 			);
@@ -326,10 +334,10 @@
 				4394359D20354D8800433495 /* BluetoothIO.swift in Sources */,
 				4303934A20291423009E16E4 /* AccountViewController.swift in Sources */,
 				E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */,
-				29D5AD722043E4720042C6AA /* TempViewController.swift in Sources */,
 				4394359B20321A9C00433495 /* BTData.swift in Sources */,
 				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
 				4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */,
+				292DA4592044772A00722F5E /* LocationManager.swift in Sources */,
 				E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */,
 				435BBBF02020E54F00D3EE75 /* TripsViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
@@ -523,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IdaDashboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboard;
@@ -537,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IdaDashboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboard;
