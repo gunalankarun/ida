@@ -18,15 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Ra-T4-Z8f">
-                                <rect key="frame" x="149" y="295" width="76" height="76"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.34999999999999998" height="0.34999999999999998"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="6dl-DI-AXp">
+                                <rect key="frame" x="123" y="269.5" width="128" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.5924944196428571" blue="0.73272879464285712" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0Ra-T4-Z8f" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pW2-Fa-0wf"/>
-                            <constraint firstItem="0Ra-T4-Z8f" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tCi-ED-LEE"/>
+                            <constraint firstItem="6dl-DI-AXp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DcQ-li-Wqf"/>
+                            <constraint firstItem="6dl-DI-AXp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XaF-gR-vLn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="180" height="180"/>
+        <image name="logo2" width="128" height="128"/>
     </resources>
 </document>
