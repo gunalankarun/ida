@@ -18,11 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="0Ra-T4-Z8f">
-                                <rect key="frame" x="117" y="236" width="141" height="141"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Ra-T4-Z8f">
+                                <rect key="frame" x="149" y="295" width="76" height="76"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.34999999999999998" height="0.34999999999999998"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.57644323354341731" blue="0.75281808035714282" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5924944196428571" blue="0.73272879464285712" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Ra-T4-Z8f" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pW2-Fa-0wf"/>
                             <constraint firstItem="0Ra-T4-Z8f" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tCi-ED-LEE"/>
@@ -36,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eye" width="512" height="512"/>
+        <image name="logo" width="180" height="180"/>
     </resources>
 </document>
