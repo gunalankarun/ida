@@ -298,10 +298,12 @@
             </objects>
             <point key="canvasLocation" x="1276" y="-313.49325337331339"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="DoG-9T-4br">
             <objects>
                 <navigationController id="5ya-GX-zqz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="lGV-gS-45q"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bkb-dM-FKj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -320,6 +322,9 @@
             <point key="canvasLocation" x="-610" y="-312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pz5-f6-v9T"/>
     </inferredMetricsTieBreakers>
