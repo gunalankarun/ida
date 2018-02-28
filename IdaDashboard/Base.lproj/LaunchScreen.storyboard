@@ -22,7 +22,7 @@
                                 <rect key="frame" x="123" y="269.5" width="128" height="128"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.5924944196428571" blue="0.73272879464285712" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.59215686274509804" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6dl-DI-AXp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DcQ-li-Wqf"/>
                             <constraint firstItem="6dl-DI-AXp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XaF-gR-vLn"/>
