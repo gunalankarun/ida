@@ -22,8 +22,8 @@ class AccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    let user = "kalhan";
-    let pass = "koul"
+    let user = "";
+    let pass = ""
     
     //MARK: Actions
     @IBAction func login(_ sender: UIButton) {
