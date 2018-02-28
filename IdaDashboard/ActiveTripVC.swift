@@ -12,6 +12,7 @@ import CoreLocation
 import os.log
 
 class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
+    var bluetoothIO: BluetoothIO!
 
     // UIs
     @IBOutlet weak var mapView: MKMapView!
@@ -36,6 +37,8 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        bluetoothIO = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2", delegate: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,7 +50,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
+//        createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
     }
 
     override func didReceiveMemoryWarning() {
@@ -126,6 +129,21 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         
         updateDisplay()
         lSpeed.text = "Miles per hour: \(location.speed) mph"
+    }
+}
+
+extension ActiveTripVC: BluetoothIODelegate {
+    func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
+        print(value)
+        if value == 1 {
+            //view.backgroundColor = UIColor.yellow
+            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (BLINKING)")
+        } else if value == 2 {
+            //view.backgroundColor = UIColor.black
+            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (YAWNING)")
+        } else {
+            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (UNKNOWN)")
+        }
     }
 }
 
