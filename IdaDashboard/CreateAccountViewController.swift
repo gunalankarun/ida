@@ -1,20 +1,23 @@
 //
-//  AccountViewController.swift
+//  CreateAccountViewController.swift
 //  IdaDashboard
 //
-//  Created by Gunalan Karun on 2/5/18.
+//  Created by Kalhan Koul on 2/24/18.
 //  Copyright © 2018 Ida. All rights reserved.
 //
 
 import UIKit
 
-class AccountViewController: UIViewController {
-
-    //MARK: Properties
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var feedbackTextField: UITextField!
+class CreateAccountViewController: UIViewController {
     
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var retypePasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +25,13 @@ class AccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    let user = "";
-    let pass = ""
-    
     //MARK: Actions
-    @IBAction func login(_ sender: UIButton) {
-        if ((usernameTextField.text == user && passwordTextField.text == pass)){
-            self.performSegue(withIdentifier: "loginSeg", sender: self)
-        } else {
-            feedbackTextField.text = "Invalid username or password.";
-        }
-    }
     @IBAction func createAccount(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "createAccountSeg", sender: self)
+                self.performSegue(withIdentifier: "createAccountLoginSeg", sender: self)
     }
     
-    @IBOutlet weak var createaccount: UIButton!
+    
+
     
     
 
