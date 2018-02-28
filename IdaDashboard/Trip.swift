@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import os.log
 
-class Trip {
+class Trip: NSObject, NSCoding {
     // MARK: Properties
     var title: String
     var start: Date
@@ -17,6 +18,23 @@ class Trip {
     var score: Int
     var distance: Double
     var cost: Double
+    
+    
+    //MARK: Archiving Paths
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("trips")
+    
+    //MARK: Types
+    
+    struct PropertyKey {
+        static let title = "title"
+        static let start = "start"
+        static let end = "end"
+        static let mpg = "mpg"
+        static let score = "score"
+        static let distance = "distance"
+        static let cost = "cost"
+    }
     
     // MARK: Initialization
     init?(title: String, start: Date, end: Date, mpg: Double, score: Int,
@@ -54,5 +72,35 @@ class Trip {
         self.score = score
         self.distance = distance
         self.cost = cost
+    }
+    
+    //MARK: NSCoding
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(title, forKey: PropertyKey.title)
+        aCoder.encode(start, forKey: PropertyKey.start)
+        aCoder.encode(end, forKey: PropertyKey.end)
+        aCoder.encode(mpg, forKey: PropertyKey.mpg)
+        aCoder.encode(score, forKey: PropertyKey.score)
+        aCoder.encode(distance, forKey: PropertyKey.distance)
+        aCoder.encode(cost, forKey: PropertyKey.cost)
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        
+        // The name is required. If we cannot decode a name string, the initializer should fail.
+        guard let title = aDecoder.decodeObject(forKey: PropertyKey.title) as? String else {
+            os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        
+        let start = aDecoder.decodeObject(forKey: PropertyKey.start) as? Date
+        let end = aDecoder.decodeObject(forKey: PropertyKey.end) as? Date
+        let mpg = aDecoder.decodeDouble(forKey: PropertyKey.mpg)
+        let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
+        let distance = aDecoder.decodeDouble(forKey: PropertyKey.distance)
+        let cost = aDecoder.decodeDouble(forKey: PropertyKey.cost)
+        
+        // Must call designated initializer.
+        self.init(title: title, start:start!, end: end!, mpg: mpg, score: score, distance: distance, cost: cost)
     }
 }
