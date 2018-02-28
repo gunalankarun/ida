@@ -13,13 +13,15 @@ class AccountViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var feedbackTextField: UITextField!
+   
+    @IBOutlet weak var feedbackTextField: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        feedbackTextField.text = "";
     }
 
     let user = "";
