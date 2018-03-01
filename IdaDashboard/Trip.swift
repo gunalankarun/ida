@@ -22,7 +22,7 @@ class Trip: NSObject, NSCoding {
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("trips")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("Trips")
     
     //MARK: Types
     
@@ -94,15 +94,15 @@ class Trip: NSObject, NSCoding {
             return nil
         }
         
-        let start = aDecoder.decodeObject(forKey: PropertyKey.start) as? Date
-        let end = aDecoder.decodeObject(forKey: PropertyKey.end) as? Date
+        let start = aDecoder.decodeObject(forKey: PropertyKey.start) as! Date
+        let end = aDecoder.decodeObject(forKey: PropertyKey.end) as! Date
         let mpg = aDecoder.decodeDouble(forKey: PropertyKey.mpg)
         let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
         let distance = aDecoder.decodeDouble(forKey: PropertyKey.distance)
         let cost = aDecoder.decodeDouble(forKey: PropertyKey.cost)
         
         // Must call designated initializer.
-        self.init(title: title, start:start!, end: end!, mpg: mpg, score: score, distance: distance, cost: cost)
+        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost)
     }
     
     public func toString() -> String {

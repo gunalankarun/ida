@@ -155,9 +155,7 @@ class TripTableViewController: UITableViewController {
         trips += [trip1, trip2, trip3]
     }
     
-    private func loadTrips() -> [Trip]?  {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Trip.ArchiveURL.path) as? [Trip]
-    }
+   
     
     // Convert Date to String
     private func convertToString(date: Date) -> String {
@@ -168,14 +166,12 @@ class TripTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("hello world")
-        if let savedTrips = loadTrips() {
-            for trip in savedTrips {
-                print(trip.toString())
-            }
+        print("hello")
+        if let savedTrips = StorageUtil.loadTrips() {
             trips = savedTrips
-        } else {
-            print("no trips found")
+            for t in trips {
+                print(t.toString() + "\n")
+            }
         }
     }
 }
