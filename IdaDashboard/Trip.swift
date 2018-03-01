@@ -36,6 +36,7 @@ class Trip: NSObject, NSCoding {
         static let cost = "cost"
     }
     
+    
     // MARK: Initialization
     init?(title: String, start: Date, end: Date, mpg: Double, score: Int,
           distance: Double, cost: Double) {
@@ -89,7 +90,7 @@ class Trip: NSObject, NSCoding {
         
         // The name is required. If we cannot decode a name string, the initializer should fail.
         guard let title = aDecoder.decodeObject(forKey: PropertyKey.title) as? String else {
-            os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the name for a Trip object.", log: OSLog.default, type: .debug)
             return nil
         }
         
@@ -102,5 +103,9 @@ class Trip: NSObject, NSCoding {
         
         // Must call designated initializer.
         self.init(title: title, start:start!, end: end!, mpg: mpg, score: score, distance: distance, cost: cost)
+    }
+    
+    public func toString() -> String {
+        return title + " " + distance.description
     }
 }

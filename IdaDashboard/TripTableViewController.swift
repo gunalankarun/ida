@@ -16,7 +16,9 @@ class TripTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Load sample data
-        loadSampleTrips()
+        //loadSampleTrips()
+        
+        //Load saved trips
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -153,11 +155,27 @@ class TripTableViewController: UITableViewController {
         trips += [trip1, trip2, trip3]
     }
     
+    private func loadTrips() -> [Trip]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Trip.ArchiveURL.path) as? [Trip]
+    }
+    
     // Convert Date to String
     private func convertToString(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy HH:mm"
         let newDate: String = dateFormatter.string(from: date) // pass Date here
         return newDate
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("hello world")
+        if let savedTrips = loadTrips() {
+            for trip in savedTrips {
+                print(trip.toString())
+            }
+            trips = savedTrips
+        } else {
+            print("no trips found")
+        }
     }
 }

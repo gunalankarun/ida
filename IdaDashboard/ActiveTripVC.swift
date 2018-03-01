@@ -83,6 +83,14 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     @IBAction func endTrip(_ sender: Any) {
         let alert = UIAlertController(title: "End Trip", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.actionSheet)
         alert.addAction(UIAlertAction(title:"Save", style: UIAlertActionStyle.default) { _ in
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM.dd.yyyy"
+            let dateStr = formatter.string(from: date)
+            let title = "Trip on: " + dateStr
+            
+            self.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40))
+            
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
@@ -129,6 +137,19 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         
         updateDisplay()
         lSpeed.text = "Miles per hour: \(location.speed) mph"
+    }
+    
+    private func saveTrip(title: String, start: Date, end: Date, mpg: Double,
+                          score: Int, distance: Double, cost: Double) {
+        let trip = Trip(title: title,start: start, end: end, mpg: mpg, score: score, distance: distance, cost: cost)
+        print(trip!.toString())
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(trip!, toFile: Trip.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Trip successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save trip...", log: OSLog.default, type: .error)
+        }
     }
 }
 
