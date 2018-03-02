@@ -39,6 +39,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         bluetoothIO = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2", delegate: self)
+        bluetoothIO.writeValue(value: 2)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -145,14 +146,12 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
 extension ActiveTripVC: BluetoothIODelegate {
     func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
         print(value)
-        if value == 1 {
-            //view.backgroundColor = UIColor.yellow
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (BLINKING)")
-        } else if value == 2 {
-            //view.backgroundColor = UIColor.black
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (YAWNING)")
+        if value == 48 {
+            // Do Nothing
+        } else if value == 49 {
+            createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
         } else {
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (UNKNOWN)")
+            // Do Nothing
         }
     }
 }
