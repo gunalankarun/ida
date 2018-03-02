@@ -122,40 +122,6 @@ class TripTableViewController: UITableViewController {
     }
 
     // MARK: Private Methods
-    // Load sample data for demonstration purposes
-    private func loadSampleTrips() {
-        guard let trip1 = Trip(title: "Home to UT",
-                               start: Date(timeIntervalSinceNow: -1000),
-                               end: Date(timeIntervalSinceNow: -900),
-                               mpg: 19.2,
-                               score: 90,
-                               distance: 28.3,
-                               cost: 4.32) else {
-            fatalError("Unable to instantiate trip1")
-        }
-        guard let trip2 = Trip(title: "Taco Joint to EER",
-                               start: Date(timeIntervalSinceNow: -800),
-                               end: Date(timeIntervalSinceNow: -700),
-                               mpg: 29.2,
-                               score: 75,
-                               distance: 192.3,
-                               cost: 1.23) else {
-            fatalError("Unable to insantiate trip2")
-        }
-        guard let trip3 = Trip(title: "UT to Home",
-                               start: Date(timeIntervalSinceNow: -600),
-                               end: Date(timeIntervalSinceNow: -500),
-                               mpg: 40.2,
-                               score: 86,
-                               distance: 1.32,
-                               cost: 0.32) else {
-            fatalError("Unable to insantiate trip3")
-        }
-        
-        trips += [trip1, trip2, trip3]
-    }
-    
-   
     
     // Convert Date to String
     private func convertToString(date: Date) -> String {

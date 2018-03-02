@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 import os.log
 
 class Trip: NSObject, NSCoding {
@@ -18,7 +19,8 @@ class Trip: NSObject, NSCoding {
     var score: Int
     var distance: Double
     var cost: Double
-    
+    var accelerometer: [CMAccelerometerData?]
+    var gyroscope: [CMGyroData?]
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -34,12 +36,15 @@ class Trip: NSObject, NSCoding {
         static let score = "score"
         static let distance = "distance"
         static let cost = "cost"
+        static let accelerometer = "accelerometer"
+        static let gyroscope = "gyroscope"
     }
     
     
     // MARK: Initialization
     init?(title: String, start: Date, end: Date, mpg: Double, score: Int,
-          distance: Double, cost: Double) {
+          distance: Double, cost: Double, accelerometer: [CMAccelerometerData?],
+          gyroscope: [CMGyroData?]) {
         // Title must not be empty
         guard !title.isEmpty else {
             return nil
@@ -73,6 +78,8 @@ class Trip: NSObject, NSCoding {
         self.score = score
         self.distance = distance
         self.cost = cost
+        self.accelerometer = accelerometer
+        self.gyroscope = gyroscope
     }
     
     //MARK: NSCoding
@@ -84,6 +91,8 @@ class Trip: NSObject, NSCoding {
         aCoder.encode(score, forKey: PropertyKey.score)
         aCoder.encode(distance, forKey: PropertyKey.distance)
         aCoder.encode(cost, forKey: PropertyKey.cost)
+        aCoder.encode(accelerometer, forKey: PropertyKey.accelerometer)
+        aCoder.encode(gyroscope, forKey: PropertyKey.gyroscope)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -100,9 +109,11 @@ class Trip: NSObject, NSCoding {
         let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
         let distance = aDecoder.decodeDouble(forKey: PropertyKey.distance)
         let cost = aDecoder.decodeDouble(forKey: PropertyKey.cost)
+        let accelerometer = aDecoder.decodeObject(forKey: PropertyKey.accelerometer) as! [CMAccelerometerData?]
+        let gyroscope = aDecoder.decodeObject(forKey: PropertyKey.gyroscope) as! [CMGyroData?]
         
         // Must call designated initializer.
-        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost)
+        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer, gyroscope: gyroscope)
     }
     
     public func toString() -> String {
