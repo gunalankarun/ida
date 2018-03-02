@@ -26,6 +26,7 @@
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
 		43E53E1120422F5A007AB1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */; };
 		43E53E1320422FCF007AB1D5 /* UpdateAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */; };
+		D1B9D6B92048A89B00A88C94 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */; };
 		E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11BE203E238B007D5751 /* Dashboard.storyboard */; };
 		E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C1203E23C8007D5751 /* Trips.storyboard */; };
 		E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C4203E23FC007D5751 /* Account.storyboard */; };
@@ -78,6 +79,7 @@
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountInfoViewController.swift; sourceTree = "<group>"; };
+		D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		E42A11BF203E238B007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		E42A11C2203E23C8007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trips.storyboard; sourceTree = "<group>"; };
 		E42A11C5203E23FC007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
 				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
 				389500BB20474607001C7CDA /* FormatDisplay.swift */,
+				D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				TargetAttributes = {
 					435BBBE72020E54E00D3EE75 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -353,6 +357,7 @@
 				4303934C2029144B009E16E4 /* BluetoothViewController.swift in Sources */,
 				E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
+				D1B9D6B92048A89B00A88C94 /* StorageUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,12 +547,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72EFXA5424;
 				INFOPLIST_FILE = IdaDashboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ida.IdaDashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -557,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72EFXA5424;
 				INFOPLIST_FILE = IdaDashboard/Info.plist;
