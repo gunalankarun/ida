@@ -76,8 +76,8 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         
         seconds += 1
         
-        lDistance.text = "Distance traveled: \(formattedDistance)"
-        lTime.text = "Total Time: \(formattedTime)"
+        lDistance.text = "\(formattedDistance)"
+        lTime.text = "\(formattedTime)"
     }
     
     @IBAction func endTrip(_ sender: Any) {
@@ -136,7 +136,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         self.mapView.showsUserLocation = true
         
         updateDisplay()
-        lSpeed.text = "Miles per hour: \(location.speed) mph"
+        lSpeed.text = "\(location.speed) mph"
     }
     
     
