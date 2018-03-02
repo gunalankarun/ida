@@ -172,6 +172,7 @@ class TripTableViewController: UITableViewController {
             for t in trips {
                 print(t.toString() + "\n")
             }
+            self.tableView.reloadData()
         }
     }
 }
