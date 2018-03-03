@@ -14,6 +14,7 @@ import os.log
 
 class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     var bluetoothIO: BluetoothIO!
+    var bluetoothDelegateId: Int!
 
     // UIs
     @IBOutlet weak var mapView: MKMapView!
@@ -43,7 +44,8 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         getData()
         
-        bluetoothIO = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2", delegate: self)
+        bluetoothIO = BluetoothIO.shared
+        bluetoothDelegateId = bluetoothIO.registerDelegate(delegate: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -134,10 +136,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  accelerometer: self.accelerometer, gyroscope: self.gyroscope)
-            
+            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
+            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
