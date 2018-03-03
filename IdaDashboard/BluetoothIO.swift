@@ -5,10 +5,16 @@ protocol BluetoothIODelegate: class {
 }
 
 class BluetoothIO: NSObject {
+    // MARK: Constants
+    static let START_CALIBRATE: Int8 = 1
+    static let START_TRIP: Int8 = 2
+    static let END_TRIP: Int8 = 3
+    
     static let shared = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2")
     let serviceUUID: String
     var delegates: [Int: BluetoothIODelegate]
     var delegateId: Int
+    var connected: Bool
     
     var centralManager: CBCentralManager!
     var connectedPeripheral: CBPeripheral?
@@ -20,10 +26,23 @@ class BluetoothIO: NSObject {
         self.serviceUUID = serviceUUID
         self.delegates = [:]
         self.delegateId = 0
+        self.connected = false
         
         super.init()
-        
+    }
+    
+    func connect() {
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        // TODO set connected when actually connected but this is fine for the demo
+        self.connected = true
+    }
+    
+    func isConnected() -> Bool {
+        return connected
+    }
+    
+    func disconnect() {
+        // TODO disconnect/free CBCentralManager reference
     }
     
     func writeValue(value: Int8) {
@@ -36,12 +55,14 @@ class BluetoothIO: NSObject {
     }
     
     func registerDelegate(delegate: BluetoothIODelegate) -> Int {
+        // TODO make thread safe
         delegateId = delegateId + 1
         self.delegates[delegateId] = delegate
         return delegateId
     }
     
     func unregisterDelegate(id: Int) {
+        // TODO make thread safe
         self.delegates[id] = nil
     }
     

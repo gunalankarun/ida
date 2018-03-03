@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
+    var bluetoothIOId: Int!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +30,18 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func connectCamera(_ sender: UIButton) {
+        let bluetoothIO = BluetoothIO.shared
+        bluetoothIO.connect()
+    }
+    
+    @IBAction func startCalibration(_ sender: UIButton) {
+        let bluetoothIO = BluetoothIO.shared
+        // Write value
+        bluetoothIO.writeValue(value: 1)
+    }
+    
     // MARK: - Table view data source
 
     /*

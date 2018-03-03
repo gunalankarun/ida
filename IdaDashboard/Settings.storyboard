@@ -128,6 +128,9 @@
                                                     <rect key="frame" x="121" y="7" width="133" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Connect to Camera"/>
+                                                    <connections>
+                                                        <action selector="connectCamera:" destination="aSE-yU-wY0" eventType="touchUpInside" id="Hzd-Th-WCK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -143,6 +146,9 @@
                                                     <rect key="frame" x="128" y="7" width="119" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Calibrate Camera"/>
+                                                    <connections>
+                                                        <action selector="startCalibration:" destination="aSE-yU-wY0" eventType="touchUpInside" id="E46-6a-aaB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>

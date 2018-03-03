@@ -46,6 +46,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         
         bluetoothIO = BluetoothIO.shared
         bluetoothDelegateId = bluetoothIO.registerDelegate(delegate: self)
+        bluetoothIO.writeValue(value: BluetoothIO.START_TRIP)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -137,10 +138,12 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  accelerometer: self.accelerometer, gyroscope: self.gyroscope)
             self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
             self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
@@ -190,17 +193,22 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
 }
 
 extension ActiveTripVC: BluetoothIODelegate {
+    static let ALERT: Int8 = 49
+    
     func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
         print(value)
-        if value == 1 {
-            //view.backgroundColor = UIColor.yellow
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (BLINKING)")
-        } else if value == 2 {
-            //view.backgroundColor = UIColor.black
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (YAWNING)")
-        } else {
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (UNKNOWN)")
+        if value == ActiveTripVC.ALERT {
+            createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
         }
+//        if value == 1 {
+//            //view.backgroundColor = UIColor.yellow
+//            //createAlert(title: "Drowsy Alert", message: "You are falling asleep! (BLINKING)")
+//        } else if value == 2 {
+//            //view.backgroundColor = UIColor.black
+//            //createAlert(title: "Drowsy Alert", message: "You are falling asleep! (YAWNING)")
+//        } else if value == 3 {
+//            createAlert(title: "Drowsy Alert", message: "You are falling asleep! (UNKNOWN)")
+//        }
     }
 }
 
