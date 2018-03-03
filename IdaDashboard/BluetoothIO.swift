@@ -5,22 +5,44 @@ protocol BluetoothIODelegate: class {
 }
 
 class BluetoothIO: NSObject {
+    // MARK: Constants
+    static let START_CALIBRATE: Int8 = 1
+    static let START_TRIP: Int8 = 2
+    static let END_TRIP: Int8 = 3
+    
+    static let shared = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2")
     let serviceUUID: String
-    weak var delegate: BluetoothIODelegate?
+    var delegates: [Int: BluetoothIODelegate]
+    var delegateId: Int
+    var connected: Bool
     
     var centralManager: CBCentralManager!
     var connectedPeripheral: CBPeripheral?
     var targetService: CBService?
     var writableCharacteristic: CBCharacteristic?
     
-    init(serviceUUID: String, delegate: BluetoothIODelegate?) {
+    private init(serviceUUID: String) {
         print("Initializing Bluetooth Manager...")
         self.serviceUUID = serviceUUID
-        self.delegate = delegate
+        self.delegates = [:]
+        self.delegateId = 0
+        self.connected = false
         
         super.init()
-        
+    }
+    
+    func connect() {
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        // TODO set connected when actually connected but this is fine for the demo
+        self.connected = true
+    }
+    
+    func isConnected() -> Bool {
+        return connected
+    }
+    
+    func disconnect() {
+        // TODO disconnect/free CBCentralManager reference
     }
     
     func writeValue(value: Int8) {
@@ -32,6 +54,23 @@ class BluetoothIO: NSObject {
         peripheral.writeValue(data, for: characteristic, type: .withResponse)
     }
     
+    func registerDelegate(delegate: BluetoothIODelegate) -> Int {
+        // TODO make thread safe
+        delegateId = delegateId + 1
+        self.delegates[delegateId] = delegate
+        return delegateId
+    }
+    
+    func unregisterDelegate(id: Int) {
+        // TODO make thread safe
+        self.delegates[id] = nil
+    }
+    
+    func notifyDelegates(bluetoothIO: BluetoothIO, didReceiveValue: Int8) {
+        for (_, delegate) in self.delegates {
+            delegate.bluetoothIO(bluetoothIO: bluetoothIO, didReceiveValue: didReceiveValue)
+        }
+    }
 }
 
 extension BluetoothIO: CBCentralManagerDelegate {
@@ -90,10 +129,10 @@ extension BluetoothIO: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard let data = characteristic.value, let delegate = delegate else {
+        guard let data = characteristic.value else {
             return
         }
         
-        delegate.bluetoothIO(bluetoothIO: self, didReceiveValue: data.int8Value())
+        notifyDelegates(bluetoothIO: self, didReceiveValue: data.int8Value())
     }
 }

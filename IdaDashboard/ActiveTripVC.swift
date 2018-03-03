@@ -9,10 +9,12 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreMotion
 import os.log
 
 class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     var bluetoothIO: BluetoothIO!
+    var bluetoothDelegateId: Int!
 
     // UIs
     @IBOutlet weak var mapView: MKMapView!
@@ -22,12 +24,15 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     
     // vars for location
     private let locationManager = CLLocationManager()
+    private let motionManager = CMMotionManager()
     
     // vars for new trip
     private var seconds = 0
     private var timer: Timer?
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
+    private var accelerometer: [CMAccelerometerData?] = []
+    private var gyroscope: [CMGyroData?] = []
     
     // MARK: Overrides
     
@@ -37,9 +42,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        getData()
         
-        bluetoothIO = BluetoothIO(serviceUUID: "f0d87fa5-f367-4112-9cf0-0f1bd061b8a2", delegate: self)
-        bluetoothIO.writeValue(value: 2)
+        bluetoothIO = BluetoothIO.shared
+        bluetoothDelegateId = bluetoothIO.registerDelegate(delegate: self)
+        bluetoothIO.writeValue(value: BluetoothIO.START_TRIP)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,6 +88,44 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         lTime.text = "\(formattedTime)"
     }
     
+    private func getData() {
+        if (self.motionManager.isAccelerometerAvailable) {
+            self.acquireAcceleration()
+        }
+        if (self.motionManager.isGyroAvailable) {
+            self.acquireGyro()
+        }
+    }
+    
+    private func acquireAcceleration() {
+        self.motionManager.accelerometerUpdateInterval = 1/10
+        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!,
+                                     withHandler: {
+            (data: CMAccelerometerData?, error: Error?) in
+            DispatchQueue.main.async(execute: { () in
+                if(error == nil) {
+                    self.accelerometer.append(nil)
+                }
+                self.accelerometer.append(data)
+            })
+        })
+    }
+    
+    private func acquireGyro() {
+        self.motionManager.gyroUpdateInterval = 1/10
+        self.motionManager.startGyroUpdates(to: OperationQueue.current!,
+                                    withHandler: {
+            (data: CMGyroData?, error: Error?) in
+            DispatchQueue.main.async(execute: { () in
+                if(error == nil) {
+                    self.gyroscope.append(nil)
+                }
+                self.gyroscope.append(data)
+            })
+        })
+    }
+    
+    
     @IBAction func endTrip(_ sender: Any) {
         let alert = UIAlertController(title: "End Trip", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.actionSheet)
         alert.addAction(UIAlertAction(title:"Save", style: UIAlertActionStyle.default) { _ in
@@ -90,11 +135,15 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             let dateStr = formatter.string(from: date)
             let title = "Trip on: " + dateStr
             
-            StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40))
-            
+            StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
+                                 accelerometer: self.accelerometer, gyroscope: self.gyroscope)
+            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
+            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
@@ -144,14 +193,12 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
 }
 
 extension ActiveTripVC: BluetoothIODelegate {
+    static let ALERT: Int8 = 49
+    
     func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
         print(value)
-        if value == 48 {
-            // Do Nothing
-        } else if value == 49 {
+        if value == ActiveTripVC.ALERT {
             createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
-        } else {
-            // Do Nothing
         }
     }
 }

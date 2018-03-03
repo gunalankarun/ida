@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import CoreMotion
 import os.log
 
 struct StorageUtil {
     static func saveTrip(title: String, start: Date, end: Date, mpg: Double,
-                          score: Int, distance: Double, cost: Double) {
-        let trip = Trip(title: title,start: start, end: end, mpg: mpg, score: score, distance: distance, cost: cost)
+                         score: Int, distance: Double, cost: Double,
+                         accelerometer: [CMAccelerometerData?], gyroscope: [CMGyroData?]) {
+        let trip = Trip(title: title,start: start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer, gyroscope: gyroscope)
        
         var trips = [Trip]()
         
