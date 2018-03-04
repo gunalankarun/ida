@@ -82,6 +82,59 @@ class Trip: NSObject, NSCoding {
         self.gyroscope = gyroscope
     }
     
+    // MARK: Exporting
+    func exportToFileURL() -> URL? {
+        var contents: String = ""
+        contents += title + "\n"
+        contents += convertToString(date: start) + "\n"
+        contents += convertToString(date: end) + "\n"
+        contents += String(mpg) + "\n"
+        contents += String(score) + "\n"
+        contents += String(distance) + "\n"
+        contents += String(cost) + "\n"
+        contents += "\n"
+        contents += "i,accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z\n"
+        
+        let length = max(accelerometer.count, gyroscope.count)
+        
+        for i in stride(from: 0, to: length - 1, by:1) {
+            var line: String = String(i)
+            if let a = accelerometer[i]?.acceleration {
+                line += "," + String(a.x) + "," + String(a.y) + "," + String(a.z)
+            } else {
+                line += ",,,"
+            }
+            if let g = gyroscope[i]?.rotationRate {
+                line += "," + String(g.x) + "," + String(g.y) + "," + String(g.z)
+            } else {
+                line += ",,,"
+            }
+        }
+        
+        // get temporary directory path
+        let path = FileManager.default.temporaryDirectory
+        
+        // 5
+        let saveFileURL = path.appendingPathComponent("/\(convertToString(date:start)).ida")
+        print(String(describing: saveFileURL))
+        do {
+            try contents.write(to: saveFileURL, atomically: false, encoding: .utf8)
+        } catch {
+            return nil
+        }
+        return saveFileURL
+    }
+    
+    // MARK: Private Methods
+    // Convert Date to String
+    private func convertToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMddyyyy_HHmm"
+        let newDate: String = dateFormatter.string(from: date) // pass Date here
+        return newDate
+    }
+    
+    
     //MARK: NSCoding
     func encode(with aCoder: NSCoder) {
         aCoder.encode(title, forKey: PropertyKey.title)
