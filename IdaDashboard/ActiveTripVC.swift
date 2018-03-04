@@ -31,6 +31,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     private var timer: Timer?
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
+    private var locationsToSave: [(latitude: Double, longitude: Double)] = []
     private var accelerometer: [CMAccelerometerData?] = []
     private var gyroscope: [CMGyroData?] = []
     
@@ -136,7 +137,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             let title = "Trip on: " + dateStr
             
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
-                                 accelerometer: self.accelerometer, gyroscope: self.gyroscope)
+                                 accelerometer: self.accelerometer, gyroscope: self.gyroscope, locations: self.locationsToSave)
             self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
             self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
@@ -166,19 +167,18 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     location updates
     */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        for location in locations {
-            let howrecent = location.timestamp.timeIntervalSinceNow
-            guard location.horizontalAccuracy < 20 && abs(howrecent) < 10 else {continue}
-            
+        let location = locations[0]
+        
+        let howrecent = location.timestamp.timeIntervalSinceNow
+        if (location.horizontalAccuracy < 20) && (abs(howrecent) < 10) {
             if let lastLocation = locationList.last {
                 let delta = location.distance(from: lastLocation)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
             }
-            
-            locationList.append(location)
         }
+        locationList.append(location)
+        locationsToSave.append((location.coordinate.latitude, location.coordinate.longitude))
         
-        let location = locations[0]
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location.coordinate, span:span)
 

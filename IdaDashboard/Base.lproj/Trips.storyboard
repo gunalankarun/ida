@@ -254,6 +254,7 @@
                         <viewLayoutGuide key="safeArea" id="m7j-si-K72"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="v5q-DF-aTK" id="piO-uL-H1A"/>
                         <outlet property="tripCostLabel" destination="9ra-8a-5Sm" id="mBa-JP-EBf"/>
                         <outlet property="tripDistanceLabel" destination="fma-tm-S5Y" id="ecJ-4T-BwR"/>
                         <outlet property="tripScoreLabel" destination="qdA-6O-fWU" id="DSk-cW-BoH"/>
