@@ -109,6 +109,7 @@ class Trip: NSObject, NSCoding {
             } else {
                 line += ",,,"
             }
+            contents += line + "\n"
         }
         
         // get temporary directory path

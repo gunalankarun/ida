@@ -105,15 +105,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                      withHandler: {
             (data: CMAccelerometerData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
-                if let a = data?.acceleration {
-                    print("acceleration " + String(describing: a))
-                } else {
-                    print("no accelerometer data")
-                }
-                if(error == nil) {
+                if(error != nil) {
                     self.accelerometer.append(nil)
+                } else {
+                    self.accelerometer.append(data)
                 }
-                self.accelerometer.append(data)
             })
         })
     }
@@ -124,15 +120,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                     withHandler: {
             (data: CMGyroData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
-                if let g = data?.rotationRate {
-                    print("gyroscope " + String(describing: g))
-                } else {
-                    print("no gyroscope data")
-                }
-                if(error == nil) {
+                if(error != nil) {
                     self.gyroscope.append(nil)
+                } else {
+                    self.gyroscope.append(data)
                 }
-                self.gyroscope.append(data)
             })
         })
     }
