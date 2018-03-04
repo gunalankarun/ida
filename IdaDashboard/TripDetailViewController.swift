@@ -37,21 +37,21 @@ class TripDetailViewController: UIViewController, MKMapViewDelegate {
         }
         
         // set up map
-        let latitudes = trip?.locations.map {
-            location in location.0
+        var minLat = trip?.locations[0].0
+        var maxLat = minLat
+        var minLon = trip?.locations[0].1
+        var maxLon = minLon
+        
+        for location in (trip?.locations)! {
+            maxLat = max(location.0, maxLat!)
+            minLat = min(location.0, minLat!)
+            
+            maxLon = max(location.1, maxLon!)
+            minLon = min(location.1, minLon!)
         }
         
-        let longitudes = trip?.locations.map {
-            locaiton in locaiton.1
-        }
-        
-        let maxLat = latitudes?.max()!
-        let minLat = latitudes?.min()!
-        let maxLong = longitudes?.max()!
-        let minLong = longitudes?.min()!
-        
-        let center = CLLocationCoordinate2D(latitude: (minLat! + maxLat!)/2, longitude: (minLong! + maxLong!)/2)
-        let span = MKCoordinateSpan(latitudeDelta: (maxLat! - minLat!)*1.3, longitudeDelta: (maxLong! - minLong!) * 1.3)
+        let center = CLLocationCoordinate2D(latitude: (minLat! + maxLat!)/2, longitude: (minLon! + maxLon!)/2)
+        let span = MKCoordinateSpan(latitudeDelta: (maxLat! - minLat!)*1.3, longitudeDelta: (maxLon! - minLon!) * 1.3)
         let region = MKCoordinateRegion(center: center, span: span)
         
         var points: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()

@@ -22,7 +22,7 @@ class Trip: NSObject, NSCoding {
     var cost: Double
     var accelerometer: [CMAccelerometerData?]
     var gyroscope: [CMGyroData?]
-    var locations: [(latitude: Double, longitude: Double)]
+    var locations: [(latitude: Double, longitude: Double)] = [(latitude: Double, longitude: Double)]()
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -119,7 +119,7 @@ class Trip: NSObject, NSCoding {
         let locations = aDecoder.decodeObject(forKey: PropertyKey.locations) as! [(latitude: Double, longitude: Double)]
         
         // Must call designated initializer.
-        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer, gyroscope: gyroscope, locations: locations)
+        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer!, gyroscope: gyroscope, locations: locations)
     }
     
     public func toString() -> String {
