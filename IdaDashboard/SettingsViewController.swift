@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
+    @IBOutlet weak var connectionStatusLabel: UILabel!
     var bluetoothIOId: Int!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,12 +35,29 @@ class SettingsViewController: UITableViewController {
     @IBAction func connectCamera(_ sender: UIButton) {
         let bluetoothIO = BluetoothIO.shared
         bluetoothIO.connect()
+        connectionStatusLabel.text = "Connected"
+        connectionStatusLabel.textColor = UIColor(red: 92/255.0, green: 184/255.0, blue: 92/255.0, alpha: 1.0)
+        
     }
     
     @IBAction func startCalibration(_ sender: UIButton) {
         let bluetoothIO = BluetoothIO.shared
-        // Write value
-        bluetoothIO.writeValue(value: 1)
+        // Create the alert controller
+        let alertController = UIAlertController(title: "Calibration Instructions", message: "When ready click ok and look at the camera for 5 seconds.", preferredStyle: .alert)
+        
+        // Create ok actions
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            NSLog("OK Pressed")
+            bluetoothIO.writeValue(value: 1)
+        }
+        
+        // Add the action
+        alertController.addAction(okAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     // MARK: - Table view data source

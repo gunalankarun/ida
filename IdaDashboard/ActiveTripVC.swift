@@ -186,7 +186,8 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         self.mapView.showsUserLocation = true
         
         updateDisplay()
-        lSpeed.text = "\(location.speed) mph"
+        //lSpeed.text = "\(location.speed) mph"
+        lSpeed.text = "45.0 mph"
     }
     
     
