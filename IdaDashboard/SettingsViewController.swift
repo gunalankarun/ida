@@ -48,7 +48,7 @@ class SettingsViewController: UITableViewController {
         // Create ok actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
             UIAlertAction in
-            NSLog("OK Pressed")
+            print("OK Pressed")
             bluetoothIO.writeValue(value: 1)
         }
         
