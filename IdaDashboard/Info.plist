@@ -65,5 +65,29 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string></string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>com.ida.tripdata</string>
+			<key>UTTypeDescription</key>
+			<string>IDA Trip Data CSV</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<string>ida</string>
+				<key>public.mime-type</key>
+				<string>application/ida</string>
+			</dict>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+	</array>
 </dict>
 </plist>

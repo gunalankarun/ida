@@ -90,9 +90,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     
     private func getData() {
         if (self.motionManager.isAccelerometerAvailable) {
+            print("acquiring acceleration")
             self.acquireAcceleration()
         }
         if (self.motionManager.isGyroAvailable) {
+            print("acquiring gyroscope")
             self.acquireGyro()
         }
     }
@@ -103,10 +105,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                      withHandler: {
             (data: CMAccelerometerData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
-                if(error == nil) {
+                if(error != nil) {
                     self.accelerometer.append(nil)
+                } else {
+                    self.accelerometer.append(data)
                 }
-                self.accelerometer.append(data)
             })
         })
     }
@@ -117,10 +120,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                     withHandler: {
             (data: CMGyroData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
-                if(error == nil) {
+                if(error != nil) {
                     self.gyroscope.append(nil)
+                } else {
+                    self.gyroscope.append(data)
                 }
-                self.gyroscope.append(data)
             })
         })
     }
@@ -137,17 +141,22 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  accelerometer: self.accelerometer, gyroscope: self.gyroscope)
-            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
-            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+            self.cleanup()
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
-            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
-            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+            self.cleanup()
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
         self.present(alert, animated: true)
+    }
+    
+    private func cleanup() {
+        self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+        self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+        self.motionManager.stopGyroUpdates()
+        self.motionManager.stopAccelerometerUpdates()
     }
     
     /*

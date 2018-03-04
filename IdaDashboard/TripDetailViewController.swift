@@ -16,15 +16,14 @@ class TripDetailViewController: UIViewController {
     @IBOutlet weak var tripCostLabel: UILabel!
     
     /*
-     This value is either passed by `TripTableViewController` in `prepare(for:sender:)`
-     or constructed as part of adding a new meal.
+     This value is passed by `TripTableViewController` in `prepare(for:sender:)`
      */
-    var trip: Trip?
+    var trip: Trip!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set up views if editing an existing Meal.
+        // Set up views if editing an existing Trip.
         if let trip = trip {
             tripScoreLabel.text   = String(trip.score)
             tripDistanceLabel.text = String(trip.distance)
@@ -39,7 +38,21 @@ class TripDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func exportData(_ sender: UIBarButtonItem) {
+        guard let trip = trip, let url = trip.exportToFileURL() else {
+            print("problem")
+            return
+        }
+        
+        let activityViewController = UIActivityViewController(
+            activityItems: ["ida trip export", url],
+            applicationActivities: nil)
+        if let popoverPresentationController = activityViewController.popoverPresentationController {
+            popoverPresentationController.barButtonItem = sender
+        }
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
