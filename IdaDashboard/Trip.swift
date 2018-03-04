@@ -97,7 +97,9 @@ class Trip: NSObject, NSCoding {
         aCoder.encode(cost, forKey: PropertyKey.cost)
         aCoder.encode(accelerometer, forKey: PropertyKey.accelerometer)
         aCoder.encode(gyroscope, forKey: PropertyKey.gyroscope)
+        print ("encoding")
         aCoder.encode(locations, forKey: PropertyKey.locations)
+        print ("encoded")
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -116,8 +118,9 @@ class Trip: NSObject, NSCoding {
         let cost = aDecoder.decodeDouble(forKey: PropertyKey.cost)
         let accelerometer = aDecoder.decodeObject(forKey: PropertyKey.accelerometer) as? [CMAccelerometerData?]
         let gyroscope = aDecoder.decodeObject(forKey: PropertyKey.gyroscope) as! [CMGyroData?]
+        print ("decoding")
         let locations = aDecoder.decodeObject(forKey: PropertyKey.locations) as! [(latitude: Double, longitude: Double)]
-        
+        print ("decoded")
         // Must call designated initializer.
         self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer!, gyroscope: gyroscope, locations: locations)
     }

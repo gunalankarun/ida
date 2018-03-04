@@ -37,32 +37,34 @@ class TripDetailViewController: UIViewController, MKMapViewDelegate {
         }
         
         // set up map
-        var minLat = trip?.locations[0].0
-        var maxLat = minLat
-        var minLon = trip?.locations[0].1
-        var maxLon = minLon
-        
-        for location in (trip?.locations)! {
-            maxLat = max(location.0, maxLat!)
-            minLat = min(location.0, minLat!)
-            
-            maxLon = max(location.1, maxLon!)
-            minLon = min(location.1, minLon!)
-        }
-        
-        let center = CLLocationCoordinate2D(latitude: (minLat! + maxLat!)/2, longitude: (minLon! + maxLon!)/2)
-        let span = MKCoordinateSpan(latitudeDelta: (maxLat! - minLat!)*1.3, longitudeDelta: (maxLon! - minLon!) * 1.3)
-        let region = MKCoordinateRegion(center: center, span: span)
-        
-        var points: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
-        for location in (trip?.locations)! {
-            points.append(CLLocationCoordinate2D(latitude: location.0, longitude: location.1))
-        }
-        let polyline = MKPolyline(coordinates: points, count: points.count)
-        
         mapView.delegate = self
-        mapView.setRegion(region, animated: true)
-        mapView.add(polyline)
+        if trip?.locations.count != 0 {
+            var minLat = trip?.locations[0].0
+            var maxLat = minLat
+            var minLon = trip?.locations[0].1
+            var maxLon = minLon
+            
+            for location in (trip?.locations)! {
+                maxLat = max(location.0, maxLat!)
+                minLat = min(location.0, minLat!)
+                
+                maxLon = max(location.1, maxLon!)
+                minLon = min(location.1, minLon!)
+            }
+            
+            let center = CLLocationCoordinate2D(latitude: (minLat! + maxLat!)/2, longitude: (minLon! + maxLon!)/2)
+            let span = MKCoordinateSpan(latitudeDelta: (maxLat! - minLat!)*1.3, longitudeDelta: (maxLon! - minLon!) * 1.3)
+            let region = MKCoordinateRegion(center: center, span: span)
+            
+            var points: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
+            for location in (trip?.locations)! {
+                points.append(CLLocationCoordinate2D(latitude: location.0, longitude: location.1))
+            }
+            let polyline = MKPolyline(coordinates: points, count: points.count)
+            
+            mapView.setRegion(region, animated: true)
+            mapView.add(polyline)
+        }
     }
     
     private func setupMapview() {

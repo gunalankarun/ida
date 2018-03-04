@@ -136,8 +136,14 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             let dateStr = formatter.string(from: date)
             let title = "Trip on: " + dateStr
             
+            print ("saving the trip")
+            for location in self.locationsToSave {
+                print (location.0.description + " " + location.1.description)
+            }
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  accelerometer: self.accelerometer, gyroscope: self.gyroscope, locations: self.locationsToSave)
+            print ("trip saved.")
+            
             self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
             self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
@@ -174,10 +180,12 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             if let lastLocation = locationList.last {
                 let delta = location.distance(from: lastLocation)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
+                locationsToSave.append((location.coordinate.latitude, location.coordinate.longitude))
+            } else if locationList.count == 0 {
+                locationsToSave.append((location.coordinate.latitude, location.coordinate.longitude))
             }
         }
         locationList.append(location)
-        locationsToSave.append((location.coordinate.latitude, location.coordinate.longitude))
         
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location.coordinate, span:span)
