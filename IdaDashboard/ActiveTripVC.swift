@@ -90,9 +90,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     
     private func getData() {
         if (self.motionManager.isAccelerometerAvailable) {
+            print("acquiring acceleration")
             self.acquireAcceleration()
         }
         if (self.motionManager.isGyroAvailable) {
+            print("acquiring gyroscope")
             self.acquireGyro()
         }
     }
@@ -103,6 +105,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                      withHandler: {
             (data: CMAccelerometerData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
+                if let a = data?.acceleration {
+                    print("acceleration " + String(describing: a))
+                } else {
+                    print("no accelerometer data")
+                }
                 if(error == nil) {
                     self.accelerometer.append(nil)
                 }
@@ -117,6 +124,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                     withHandler: {
             (data: CMGyroData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
+                if let g = data?.rotationRate {
+                    print("gyroscope " + String(describing: g))
+                } else {
+                    print("no gyroscope data")
+                }
                 if(error == nil) {
                     self.gyroscope.append(nil)
                 }

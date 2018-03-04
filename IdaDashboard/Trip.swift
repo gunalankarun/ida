@@ -99,12 +99,12 @@ class Trip: NSObject, NSCoding {
         
         for i in stride(from: 0, to: length - 1, by:1) {
             var line: String = String(i)
-            if let a = accelerometer[i]?.acceleration {
+            if i < accelerometer.count, let a = accelerometer[i]?.acceleration {
                 line += "," + String(a.x) + "," + String(a.y) + "," + String(a.z)
             } else {
                 line += ",,,"
             }
-            if let g = gyroscope[i]?.rotationRate {
+            if i < gyroscope.count, let g = gyroscope[i]?.rotationRate {
                 line += "," + String(g.x) + "," + String(g.y) + "," + String(g.z)
             } else {
                 line += ",,,"
