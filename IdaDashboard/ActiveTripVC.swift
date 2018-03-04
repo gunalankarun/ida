@@ -141,17 +141,22 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  accelerometer: self.accelerometer, gyroscope: self.gyroscope)
-            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
-            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+            self.cleanup()
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
-            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
-            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+            self.cleanup()
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
         self.present(alert, animated: true)
+    }
+    
+    private func cleanup() {
+        self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+        self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+        self.motionManager.stopGyroUpdates()
+        self.motionManager.stopAccelerometerUpdates()
     }
     
     /*
