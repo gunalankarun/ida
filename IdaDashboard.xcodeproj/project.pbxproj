@@ -33,8 +33,6 @@
 		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
 		E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableViewController.swift */; };
 		E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */; };
-		E4C2FAE62049DD0200F52E23 /* Sensor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C2FAE52049DD0200F52E23 /* Sensor.storyboard */; };
-		E4C2FAE82049DD3900F52E23 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2FAE72049DD3900F52E23 /* SensorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +85,6 @@
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
-		E4C2FAE52049DD0200F52E23 /* Sensor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sensor.storyboard; sourceTree = "<group>"; };
-		E4C2FAE72049DD3900F52E23 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,14 +149,12 @@
 			children = (
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
-				E4C2FAE72049DD3900F52E23 /* SensorViewController.swift */,
 				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
 				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
 				43039347202913D1009E16E4 /* DashboardViewController.swift */,
 				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
 				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
-				E4C2FAE52049DD0200F52E23 /* Sensor.storyboard */,
 				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
 				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
 				E42A11C4203E23FC007D5751 /* Account.storyboard */,
@@ -316,7 +310,6 @@
 			files = (
 				435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */,
 				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
-				E4C2FAE62049DD0200F52E23 /* Sensor.storyboard in Resources */,
 				E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
@@ -360,7 +353,6 @@
 				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
 				E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
-				E4C2FAE82049DD3900F52E23 /* SensorViewController.swift in Sources */,
 				D1B9D6B92048A89B00A88C94 /* StorageUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
