@@ -170,21 +170,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZS-sR-59Q">
                                                 <rect key="frame" x="0.0" y="24" width="359" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Chart Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-BO-jsZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="150"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="acceleration" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-r2-PSR">
+                                                        <rect key="frame" x="0.0" y="-1" width="359" height="150"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="4QK-BO-jsZ" secondAttribute="trailing" id="GVl-kS-Una"/>
-                                                    <constraint firstItem="4QK-BO-jsZ" firstAttribute="leading" secondItem="WZS-sR-59Q" secondAttribute="leading" id="UoI-qE-ay5"/>
                                                     <constraint firstAttribute="height" constant="150" id="Zka-5a-Y2b"/>
-                                                    <constraint firstItem="4QK-BO-jsZ" firstAttribute="top" secondItem="WZS-sR-59Q" secondAttribute="top" id="lVb-Cq-7qQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4QK-BO-jsZ" secondAttribute="bottom" id="ysz-ES-wo6"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -208,21 +201,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-ra-82g">
                                                 <rect key="frame" x="0.0" y="24" width="359" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Chart Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYV-vZ-eO9">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fuel" translatesAutoresizingMaskIntoConstraints="NO" id="Xrs-6H-Whf">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="150"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="0Qn-zt-PFm"/>
-                                                    <constraint firstAttribute="bottom" secondItem="PYV-vZ-eO9" secondAttribute="bottom" id="LYR-3G-11Y"/>
-                                                    <constraint firstAttribute="trailing" secondItem="PYV-vZ-eO9" secondAttribute="trailing" id="STh-5s-Tpk"/>
-                                                    <constraint firstItem="PYV-vZ-eO9" firstAttribute="leading" secondItem="V4o-ra-82g" secondAttribute="leading" id="UMd-0n-iZd"/>
-                                                    <constraint firstItem="PYV-vZ-eO9" firstAttribute="top" secondItem="V4o-ra-82g" secondAttribute="top" id="hAN-e0-Chm"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -270,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGz-4o-JBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="375"/>
+            <point key="canvasLocation" x="3300" y="374.6305418719212"/>
         </scene>
         <!--Trips-->
         <scene sceneID="mIX-86-Bzs">
@@ -311,6 +297,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="acceleration" width="896" height="374"/>
+        <image name="fuel" width="662" height="276"/>
         <image name="trips" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
