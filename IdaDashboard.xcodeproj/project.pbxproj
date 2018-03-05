@@ -23,10 +23,14 @@
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
 		43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 43D919F5204C896800F268B0 /* UTDrive60.gpx */; };
+		43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */; };
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
 		43E53E1120422F5A007AB1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */; };
 		43E53E1320422FCF007AB1D5 /* UpdateAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */; };
+		7EE56C92664161CB06341D44 /* Pods_IdaDashboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B6B31959AED397659CDC60 /* Pods_IdaDashboardUITests.framework */; };
+		C0EE21FBD37148DE5CDCD76C /* Pods_IdaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0D40DE84EF0B44C8476820 /* Pods_IdaDashboard.framework */; };
 		D1B9D6B92048A89B00A88C94 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */; };
+		E3EE6254DD1382926213BDE2 /* Pods_IdaDashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22167EE521698CCE460706E9 /* Pods_IdaDashboardTests.framework */; };
 		E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11BE203E238B007D5751 /* Dashboard.storyboard */; };
 		E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C1203E23C8007D5751 /* Trips.storyboard */; };
 		E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C4203E23FC007D5751 /* Account.storyboard */; };
@@ -54,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22167EE521698CCE460706E9 /* Pods_IdaDashboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdaDashboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25451D891DD5190D7A4ABF48 /* Pods-IdaDashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard.debug.xcconfig"; sourceTree = "<group>"; };
 		290D064C2043822C00CCD8F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTripVC.swift; sourceTree = "<group>"; };
 		292DA456204476BD00722F5E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -76,10 +82,17 @@
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
 		43D919F5204C896800F268B0 /* UTDrive60.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UTDrive60.gpx; sourceTree = "<group>"; };
+		43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountInfoViewController.swift; sourceTree = "<group>"; };
+		6802E00B4C57918C0305F6C7 /* Pods-IdaDashboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardTests/Pods-IdaDashboardTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A862BA61B0347907B126F0D /* Pods-IdaDashboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardTests/Pods-IdaDashboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7320A78050F51FF8B6C720C4 /* Pods-IdaDashboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardUITests/Pods-IdaDashboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		77390994BA0A4C27E350E5FA /* Pods-IdaDashboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard.release.xcconfig"; sourceTree = "<group>"; };
+		7C0D40DE84EF0B44C8476820 /* Pods_IdaDashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdaDashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
+		E3B6B31959AED397659CDC60 /* Pods_IdaDashboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdaDashboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A11BF203E238B007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		E42A11C2203E23C8007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trips.storyboard; sourceTree = "<group>"; };
 		E42A11C5203E23FC007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
@@ -87,6 +100,7 @@
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		E951A387F2C134555BD8ED18 /* Pods-IdaDashboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardUITests/Pods-IdaDashboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,7 @@
 			files = (
 				292DA457204476BD00722F5E /* MapKit.framework in Frameworks */,
 				290D064D2043822C00CCD8F6 /* CoreLocation.framework in Frameworks */,
+				C0EE21FBD37148DE5CDCD76C /* Pods_IdaDashboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EE6254DD1382926213BDE2 /* Pods_IdaDashboardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE56C92664161CB06341D44 /* Pods_IdaDashboardUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +139,9 @@
 				43D919F5204C896800F268B0 /* UTDrive60.gpx */,
 				292DA456204476BD00722F5E /* MapKit.framework */,
 				290D064C2043822C00CCD8F6 /* CoreLocation.framework */,
+				7C0D40DE84EF0B44C8476820 /* Pods_IdaDashboard.framework */,
+				22167EE521698CCE460706E9 /* Pods_IdaDashboardTests.framework */,
+				E3B6B31959AED397659CDC60 /* Pods_IdaDashboardUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +154,7 @@
 				435BBC0C2020E54F00D3EE75 /* IdaDashboardUITests */,
 				435BBBE92020E54E00D3EE75 /* Products */,
 				290D064B2043822C00CCD8F6 /* Frameworks */,
+				4D5D01EC3EF47C1EF73AB63E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,29 +171,18 @@
 		435BBBEA2020E54E00D3EE75 /* IdaDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				43D919FA204DB4F600F268B0 /* Storyboards */,
+				43D919F9204DB4D800F268B0 /* ViewControllers */,
+				43D919F8204DB4B000F268B0 /* Resources */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
-				4303934920291423009E16E4 /* AccountViewController.swift */,
-				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				4394359C20354D8800433495 /* BluetoothIO.swift */,
 				4394359A20321A9C00433495 /* BTData.swift */,
-				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
-				43039347202913D1009E16E4 /* DashboardViewController.swift */,
 				389500BB20474607001C7CDA /* FormatDisplay.swift */,
-				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
 				D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */,
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
-				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
-				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
-				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
-				E42A11C4203E23FC007D5751 /* Account.storyboard */,
-				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
-				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
-				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
-				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
-				43E53E0E20421B8B007AB1D5 /* Settings.storyboard */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -195,6 +205,55 @@
 			path = IdaDashboardUITests;
 			sourceTree = "<group>";
 		};
+		43D919F8204DB4B000F268B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		43D919F9204DB4D800F268B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4303934920291423009E16E4 /* AccountViewController.swift */,
+				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
+				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
+				43039347202913D1009E16E4 /* DashboardViewController.swift */,
+				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
+				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
+				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
+				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		43D919FA204DB4F600F268B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E42A11C4203E23FC007D5751 /* Account.storyboard */,
+				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
+				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
+				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
+				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
+				43E53E0E20421B8B007AB1D5 /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4D5D01EC3EF47C1EF73AB63E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25451D891DD5190D7A4ABF48 /* Pods-IdaDashboard.debug.xcconfig */,
+				77390994BA0A4C27E350E5FA /* Pods-IdaDashboard.release.xcconfig */,
+				6A862BA61B0347907B126F0D /* Pods-IdaDashboardTests.debug.xcconfig */,
+				6802E00B4C57918C0305F6C7 /* Pods-IdaDashboardTests.release.xcconfig */,
+				7320A78050F51FF8B6C720C4 /* Pods-IdaDashboardUITests.debug.xcconfig */,
+				E951A387F2C134555BD8ED18 /* Pods-IdaDashboardUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,9 +261,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 435BBC122020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboard" */;
 			buildPhases = (
+				0B40E01A0AF30DC0E887AEA0 /* [CP] Check Pods Manifest.lock */,
 				435BBBE42020E54E00D3EE75 /* Sources */,
 				435BBBE52020E54E00D3EE75 /* Frameworks */,
 				435BBBE62020E54E00D3EE75 /* Resources */,
+				AEBE95CAAA5E93326BFF57D6 /* [CP] Embed Pods Frameworks */,
+				50207ACAED34D47597540FFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 435BBC152020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboardTests" */;
 			buildPhases = (
+				FF0E1B0B6A31AA76B07A3E90 /* [CP] Check Pods Manifest.lock */,
 				435BBBFA2020E54F00D3EE75 /* Sources */,
 				435BBBFB2020E54F00D3EE75 /* Frameworks */,
 				435BBBFC2020E54F00D3EE75 /* Resources */,
+				5B5704C1C342CD3604E2C704 /* [CP] Embed Pods Frameworks */,
+				CA82BBEFFFD41EA5DD2AA6F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,9 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 435BBC182020E54F00D3EE75 /* Build configuration list for PBXNativeTarget "IdaDashboardUITests" */;
 			buildPhases = (
+				7D70D66E6C2FDBC6AE059AAC /* [CP] Check Pods Manifest.lock */,
 				435BBC052020E54F00D3EE75 /* Sources */,
 				435BBC062020E54F00D3EE75 /* Frameworks */,
 				435BBC072020E54F00D3EE75 /* Resources */,
+				CF9645D1B7C60B9E71C0735A /* [CP] Embed Pods Frameworks */,
+				9C417763ED304FD1237E08E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,6 +385,7 @@
 				43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
+				43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */,
 				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,
 				43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */,
 			);
@@ -337,6 +406,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B40E01A0AF30DC0E887AEA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IdaDashboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50207ACAED34D47597540FFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B5704C1C342CD3604E2C704 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboardTests/Pods-IdaDashboardTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D70D66E6C2FDBC6AE059AAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IdaDashboardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C417763ED304FD1237E08E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboardUITests/Pods-IdaDashboardUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBE95CAAA5E93326BFF57D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA82BBEFFFD41EA5DD2AA6F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboardTests/Pods-IdaDashboardTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF9645D1B7C60B9E71C0735A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboardUITests/Pods-IdaDashboardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF0E1B0B6A31AA76B07A3E90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IdaDashboardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		435BBBE42020E54E00D3EE75 /* Sources */ = {
@@ -545,6 +766,7 @@
 		};
 		435BBC132020E54F00D3EE75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25451D891DD5190D7A4ABF48 /* Pods-IdaDashboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -562,6 +784,7 @@
 		};
 		435BBC142020E54F00D3EE75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77390994BA0A4C27E350E5FA /* Pods-IdaDashboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -578,6 +801,7 @@
 		};
 		435BBC162020E54F00D3EE75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A862BA61B0347907B126F0D /* Pods-IdaDashboardTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -594,6 +818,7 @@
 		};
 		435BBC172020E54F00D3EE75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6802E00B4C57918C0305F6C7 /* Pods-IdaDashboardTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +835,7 @@
 		};
 		435BBC192020E54F00D3EE75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7320A78050F51FF8B6C720C4 /* Pods-IdaDashboardUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +851,7 @@
 		};
 		435BBC1A2020E54F00D3EE75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E951A387F2C134555BD8ED18 /* Pods-IdaDashboardUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

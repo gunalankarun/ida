@@ -1,0 +1,17 @@
+PODS:
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
+  - SwiftySound (0.7.0)
+
+DEPENDENCIES:
+  - Charts
+  - SwiftySound
+
+SPEC CHECKSUMS:
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
+  SwiftySound: bca0bb721690fb65249f4776cb0875abd98e9941
+
+PODFILE CHECKSUM: 1c4f1b6b9ae2e4014f91db126738027663240fec
+
+COCOAPODS: 1.4.0
