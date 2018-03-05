@@ -169,29 +169,18 @@
 		435BBBEA2020E54E00D3EE75 /* IdaDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				43D919FA204DB4F600F268B0 /* Storyboards */,
+				43D919F9204DB4D800F268B0 /* ViewControllers */,
+				43D919F8204DB4B000F268B0 /* Resources */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
-				4303934920291423009E16E4 /* AccountViewController.swift */,
-				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				4394359C20354D8800433495 /* BluetoothIO.swift */,
 				4394359A20321A9C00433495 /* BTData.swift */,
-				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
-				43039347202913D1009E16E4 /* DashboardViewController.swift */,
 				389500BB20474607001C7CDA /* FormatDisplay.swift */,
-				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
 				D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */,
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
-				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
-				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
-				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
-				E42A11C4203E23FC007D5751 /* Account.storyboard */,
-				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
-				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
-				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
-				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
-				43E53E0E20421B8B007AB1D5 /* Settings.storyboard */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -212,6 +201,41 @@
 				435BBC0F2020E54F00D3EE75 /* Info.plist */,
 			);
 			path = IdaDashboardUITests;
+			sourceTree = "<group>";
+		};
+		43D919F8204DB4B000F268B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		43D919F9204DB4D800F268B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4303934920291423009E16E4 /* AccountViewController.swift */,
+				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
+				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
+				43039347202913D1009E16E4 /* DashboardViewController.swift */,
+				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
+				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
+				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
+				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		43D919FA204DB4F600F268B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E42A11C4203E23FC007D5751 /* Account.storyboard */,
+				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
+				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
+				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
+				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
+				43E53E0E20421B8B007AB1D5 /* Settings.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		4D5D01EC3EF47C1EF73AB63E /* Pods */ = {
