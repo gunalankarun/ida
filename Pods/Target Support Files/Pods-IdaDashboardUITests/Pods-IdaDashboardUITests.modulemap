@@ -1,0 +1,6 @@
+framework module Pods_IdaDashboardUITests {
+  umbrella header "Pods-IdaDashboardUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
