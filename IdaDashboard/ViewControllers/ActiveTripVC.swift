@@ -210,9 +210,11 @@ extension ActiveTripVC: BluetoothIODelegate {
     
     func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
         print(value)
-        if value == ActiveTripVC.ALERT {
+        
+        if value == ActiveTripVC.ALERT && self.presentedViewController == nil {
             let alertController = UIAlertController(title: "Drowsy Alert", message: "You are falling asleep!", preferredStyle: .alert)
             
+            Sound.stopAll()
             Sound.play(file: "iphone_alarm", fileExtension: "mp3", numberOfLoops: -1)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {

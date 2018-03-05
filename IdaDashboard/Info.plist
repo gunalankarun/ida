@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Ida</string>
+	<string>ida</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,7 +27,7 @@
 		<string>MKDirectionsModeCar</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Let IDA use phone&apos;s location service</string>
+	<string>Let IDA use phone's location service</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -70,14 +70,16 @@
 		<dict>
 			<key>CFBundleTypeName</key>
 			<string></string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.data</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>com.ida.tripdata</string>
 			<key>UTTypeDescription</key>
 			<string>IDA Trip Data CSV</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.ida.tripdata</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -85,8 +87,6 @@
 				<key>public.mime-type</key>
 				<string>application/ida</string>
 			</dict>
-			<key>LSHandlerRank</key>
-			<string>Default</string>
 		</dict>
 	</array>
 </dict>
