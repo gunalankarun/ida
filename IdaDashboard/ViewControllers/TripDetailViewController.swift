@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Charts
+//import Charts
 
 class TripDetailViewController: UIViewController {
 

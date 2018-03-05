@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import CoreMotion
 import os.log
+import SwiftySound
 
 class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     var bluetoothIO: BluetoothIO!
@@ -208,7 +209,17 @@ extension ActiveTripVC: BluetoothIODelegate {
     func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
         print(value)
         if value == ActiveTripVC.ALERT {
-            createAlert(title: "Drowsy Alert", message: "You are falling asleep!")
+            let alertController = UIAlertController(title: "Drowsy Alert", message: "You are falling asleep!", preferredStyle: .alert)
+            
+            Sound.play(file: "iphone_alarm", fileExtension: "mp3", numberOfLoops: -1)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                UIAlertAction in
+                Sound.stopAll()
+            }
+
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 }

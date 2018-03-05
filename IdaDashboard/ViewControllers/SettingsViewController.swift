@@ -35,9 +35,10 @@ class SettingsViewController: UITableViewController {
     @IBAction func connectCamera(_ sender: UIButton) {
         let bluetoothIO = BluetoothIO.shared
         bluetoothIO.connect()
-        connectionStatusLabel.text = "Connected"
-        connectionStatusLabel.textColor = UIColor(red: 92/255.0, green: 184/255.0, blue: 92/255.0, alpha: 1.0)
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.connectionStatusLabel.text = "Connected"
+            self.connectionStatusLabel.textColor = UIColor(red: 92/255.0, green: 184/255.0, blue: 92/255.0, alpha: 1.0)
+        }
     }
     
     @IBAction func startCalibration(_ sender: UIButton) {

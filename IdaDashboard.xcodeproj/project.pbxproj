@@ -23,6 +23,7 @@
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
 		43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 43D919F5204C896800F268B0 /* UTDrive60.gpx */; };
+		43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */; };
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
 		43E53E1120422F5A007AB1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */; };
 		43E53E1320422FCF007AB1D5 /* UpdateAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */; };
@@ -81,6 +82,7 @@
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
 		43D919F5204C896800F268B0 /* UTDrive60.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UTDrive60.gpx; sourceTree = "<group>"; };
+		43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountInfoViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		43D919F8204DB4B000F268B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
+				43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */,
 				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,
 				43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */,
 			);
@@ -493,10 +497,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

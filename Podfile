@@ -18,5 +18,6 @@ target 'IdaDashboard' do
   end
 
   pod 'Charts'
+  pod 'SwiftySound'
 
 end
