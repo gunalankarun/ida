@@ -22,6 +22,7 @@
 		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
+		43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 43D919F5204C896800F268B0 /* UTDrive60.gpx */; };
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
 		43E53E1120422F5A007AB1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */; };
 		43E53E1320422FCF007AB1D5 /* UpdateAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */; };
@@ -74,6 +75,7 @@
 		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
+		43D919F5204C896800F268B0 /* UTDrive60.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UTDrive60.gpx; sourceTree = "<group>"; };
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountInfoViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		290D064B2043822C00CCD8F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43D919F5204C896800F268B0 /* UTDrive60.gpx */,
 				292DA456204476BD00722F5E /* MapKit.framework */,
 				290D064C2043822C00CCD8F6 /* CoreLocation.framework */,
 			);
@@ -147,29 +150,29 @@
 		435BBBEA2020E54E00D3EE75 /* IdaDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
-				E4526F8A2029022400BF80B5 /* Trip.swift */,
-				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
-				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
-				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
-				43039347202913D1009E16E4 /* DashboardViewController.swift */,
-				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
-				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
-				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
-				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
-				E42A11C4203E23FC007D5751 /* Account.storyboard */,
-				4303934920291423009E16E4 /* AccountViewController.swift */,
-				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
-				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
-				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
+				4303934920291423009E16E4 /* AccountViewController.swift */,
+				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
+				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				4394359C20354D8800433495 /* BluetoothIO.swift */,
 				4394359A20321A9C00433495 /* BTData.swift */,
-				43E53E0E20421B8B007AB1D5 /* Settings.storyboard */,
-				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
-				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
+				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
+				43039347202913D1009E16E4 /* DashboardViewController.swift */,
 				389500BB20474607001C7CDA /* FormatDisplay.swift */,
+				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
 				D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */,
+				E4526F8A2029022400BF80B5 /* Trip.swift */,
+				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
+				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
+				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
+				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
+				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
+				E42A11C4203E23FC007D5751 /* Account.storyboard */,
+				E42A11BE203E238B007D5751 /* Dashboard.storyboard */,
+				435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */,
+				435BBBF12020E54F00D3EE75 /* Main.storyboard */,
+				E42A11C1203E23C8007D5751 /* Trips.storyboard */,
+				43E53E0E20421B8B007AB1D5 /* Settings.storyboard */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */,
 				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
 				E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */,
+				43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
 				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,

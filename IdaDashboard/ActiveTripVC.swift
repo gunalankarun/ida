@@ -31,7 +31,6 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     private var timer: Timer?
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
-    private var locationsToSave: [(latitude: Double, longitude: Double)] = []
     private var accelerometer: [CMAccelerometerData?] = []
     private var gyroscope: [CMGyroData?] = []
     
@@ -91,9 +90,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     
     private func getData() {
         if (self.motionManager.isAccelerometerAvailable) {
+            print("acquiring acceleration")
             self.acquireAcceleration()
         }
         if (self.motionManager.isGyroAvailable) {
+            print("acquiring gyroscope")
             self.acquireGyro()
         }
     }
@@ -104,10 +105,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                      withHandler: {
             (data: CMAccelerometerData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
-                if(error == nil) {
+                if(error != nil) {
                     self.accelerometer.append(nil)
+                } else {
+                    self.accelerometer.append(data)
                 }
-                self.accelerometer.append(data)
             })
         })
     }
@@ -118,10 +120,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
                                     withHandler: {
             (data: CMGyroData?, error: Error?) in
             DispatchQueue.main.async(execute: { () in
-                if(error == nil) {
+                if(error != nil) {
                     self.gyroscope.append(nil)
+                } else {
+                    self.gyroscope.append(data)
                 }
-                self.gyroscope.append(data)
             })
         })
     }
@@ -136,25 +139,28 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             let dateStr = formatter.string(from: date)
             let title = "Trip on: " + dateStr
             
-            print ("saving the trip")
-            for location in self.locationsToSave {
-                print (location.0.description + " " + location.1.description)
-            }
+//            print ("saving the trip")
+//            for loc in self.locationList2 {
+//                print (loc.coordinate.latitude.description + " " + loc.coordinate.longitude.description)
+//            }
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
-                                 accelerometer: self.accelerometer, gyroscope: self.gyroscope, locations: self.locationsToSave)
-            print ("trip saved.")
-            
-            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
-            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+                                 accelerometer: self.accelerometer, gyroscope: self.gyroscope, locations: self.locationList)
+            self.cleanup()
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
-            self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
-            self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+            self.cleanup()
             self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
         self.present(alert, animated: true)
+    }
+    
+    private func cleanup() {
+        self.bluetoothIO.unregisterDelegate(id: self.bluetoothDelegateId)
+        self.bluetoothIO.writeValue(value: BluetoothIO.END_TRIP)
+        self.motionManager.stopGyroUpdates()
+        self.motionManager.stopAccelerometerUpdates()
     }
     
     /*
@@ -180,12 +186,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             if let lastLocation = locationList.last {
                 let delta = location.distance(from: lastLocation)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
-                locationsToSave.append((location.coordinate.latitude, location.coordinate.longitude))
+                locationList.append(location)
             } else if locationList.count == 0 {
-                locationsToSave.append((location.coordinate.latitude, location.coordinate.longitude))
+                locationList.append(location)
             }
         }
-        locationList.append(location)
         
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location.coordinate, span:span)
@@ -194,10 +199,9 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         self.mapView.showsUserLocation = true
         
         updateDisplay()
-        lSpeed.text = "\(location.speed) mph"
+        //lSpeed.text = "\(location.speed) mph"
+        lSpeed.text = "45.0 mph"
     }
-    
-    
 }
 
 extension ActiveTripVC: BluetoothIODelegate {

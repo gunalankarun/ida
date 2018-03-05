@@ -19,56 +19,62 @@ class TripDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     /*
-     This value is either passed by `TripTableViewController` in `prepare(for:sender:)`
-     or constructed as part of adding a new meal.
+     This value is passed by `TripTableViewController` in `prepare(for:sender:)`
      */
-    var trip: Trip?
+    var trip: Trip!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set up views if editing an existing Meal.
+        // Set up views if editing an existing Trip.
         if let trip = trip {
             tripScoreLabel.text   = String(trip.score)
             tripDistanceLabel.text = String(trip.distance)
             tripCostLabel.text = "$" + String(trip.cost)
+            
+            // set up map
+            mapView.delegate = self
+            if trip.locations.count != 0 {
+                var minLat = trip.locations[0]?.coordinate.latitude
+                var maxLat = minLat
+                var minLon = trip.locations[0]?.coordinate.longitude
+                var maxLon = minLon
+                
+                var points: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
+                
+                for location in trip.locations {
+                    let coordinate = location?.coordinate
+                    maxLat = max((coordinate?.latitude)!, maxLat!)
+                    minLat = min((coordinate?.latitude)!, minLat!)
+                    
+                    maxLon = max((coordinate?.longitude)!, maxLon!)
+                    minLon = min((coordinate?.longitude)!, minLon!)
+                    
+                    points.append(coordinate!)
+                }
+                
+                // setup map region
+                let center = CLLocationCoordinate2D(latitude: (minLat! + maxLat!)/2, longitude: (minLon! + maxLon!)/2)
+                let span = MKCoordinateSpan(latitudeDelta: (maxLat! - minLat!)*1.3, longitudeDelta: (maxLon! - minLon!) * 1.3)
+                let region = MKCoordinateRegion(center: center, span: span)
+                mapView.setRegion(region, animated: true)
+                
+                // add route
+                let polyline = MKPolyline(coordinates: points, count: points.count)
+                mapView.add(polyline)
+                
+                // add start + end annotation
+                var startAnno = MKPointAnnotation()
+                startAnno.coordinate = (trip.locations[0]?.coordinate)!
+                startAnno.title = "Start"
+                let endAnno = MKPointAnnotation()
+                endAnno.coordinate = (trip.locations[trip.locations.count-1]?.coordinate)!
+                endAnno.title = "End"
+                mapView.addAnnotations([startAnno, endAnno])
+            }
         } else {
             fatalError("Displaying TripDetail without backing information")
         }
-        
-        // set up map
-        mapView.delegate = self
-        if trip?.locations.count != 0 {
-            var minLat = trip?.locations[0].0
-            var maxLat = minLat
-            var minLon = trip?.locations[0].1
-            var maxLon = minLon
-            
-            for location in (trip?.locations)! {
-                maxLat = max(location.0, maxLat!)
-                minLat = min(location.0, minLat!)
-                
-                maxLon = max(location.1, maxLon!)
-                minLon = min(location.1, minLon!)
-            }
-            
-            let center = CLLocationCoordinate2D(latitude: (minLat! + maxLat!)/2, longitude: (minLon! + maxLon!)/2)
-            let span = MKCoordinateSpan(latitudeDelta: (maxLat! - minLat!)*1.3, longitudeDelta: (maxLon! - minLon!) * 1.3)
-            let region = MKCoordinateRegion(center: center, span: span)
-            
-            var points: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
-            for location in (trip?.locations)! {
-                points.append(CLLocationCoordinate2D(latitude: location.0, longitude: location.1))
-            }
-            let polyline = MKPolyline(coordinates: points, count: points.count)
-            
-            mapView.setRegion(region, animated: true)
-            mapView.add(polyline)
-        }
-    }
-    
-    private func setupMapview() {
-        
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -76,7 +82,7 @@ class TripDetailViewController: UIViewController, MKMapViewDelegate {
             return MKOverlayRenderer(overlay: overlay)
         }
         let renderer = MKPolylineRenderer(polyline: polyline)
-        renderer.strokeColor = .black
+        renderer.strokeColor = .blue
         renderer.lineWidth = 3
         return renderer
     }
@@ -86,7 +92,21 @@ class TripDetailViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func exportData(_ sender: UIBarButtonItem) {
+        guard let trip = trip, let url = trip.exportToFileURL() else {
+            print("problem")
+            return
+        }
+        
+        let activityViewController = UIActivityViewController(
+            activityItems: ["ida trip export", url],
+            applicationActivities: nil)
+        if let popoverPresentationController = activityViewController.popoverPresentationController {
+            popoverPresentationController.barButtonItem = sender
+        }
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
