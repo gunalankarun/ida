@@ -12,6 +12,7 @@ class CreateAccountViewController: UIViewController {
     
     
     //MARK: Properties
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -27,7 +28,9 @@ class CreateAccountViewController: UIViewController {
 
     //MARK: Actions
     @IBAction func createAccount(_ sender: UIButton) {
-                self.performSegue(withIdentifier: "createAccountLoginSeg", sender: self)
+        defaults.set(usernameTextField.text, forKey: "user")
+        defaults.set(passwordTextField.text, forKey: "pass")
+        self.performSegue(withIdentifier: "createAccountLoginSeg", sender: self)
     }
     
     
