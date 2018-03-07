@@ -65,7 +65,7 @@ class TripDetailViewController: UIViewController, MKMapViewDelegate {
                 mapView.add(polyline)
                 
                 // add start + end annotation
-                var startAnno = MKPointAnnotation()
+                let startAnno = MKPointAnnotation()
                 startAnno.coordinate = (trip.locations[0]?.coordinate)!
                 startAnno.title = "Start"
                 let endAnno = MKPointAnnotation()

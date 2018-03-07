@@ -58,16 +58,6 @@
             </objects>
             <point key="canvasLocation" x="-294" y="432"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="Zcu-fl-Ic7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Account" id="HFo-pf-dsh" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ObX-uT-3ej"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="08H-5w-sy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-294" y="508"/>
-        </scene>
     </scenes>
     <resources>
         <image name="dashboard" width="30" height="30"/>
