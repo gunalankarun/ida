@@ -11,6 +11,9 @@ import UIKit
 class AccountVC: UIViewController {
 
     //MARK: Properties
+    //MARK: Properties
+    let defaults = UserDefaults.standard
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
    
@@ -24,11 +27,13 @@ class AccountVC: UIViewController {
         feedbackTextField.text = "";
     }
 
-    let user = "";
-    let pass = ""
+//    let user = "";
+//    let pass = ""
     
     //MARK: Actions
     @IBAction func login(_ sender: UIButton) {
+        let user = defaults.object(forKey: "user") as? String ?? String()
+        let pass = defaults.object(forKey: "pass") as? String ?? String()
         if ((usernameTextField.text == user && passwordTextField.text == pass)){
             self.performSegue(withIdentifier: "loginSeg", sender: self)
         } else {
