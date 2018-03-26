@@ -102,7 +102,7 @@ class TripTableVC: UITableViewController {
         super.prepare(for: segue, sender: sender)
         switch(segue.identifier ?? "") {
         case "ShowTripDetail":
-            guard let tripDetailViewController = segue.destination as? TripDetailViewController else {
+            guard let tripDetailViewController = segue.destination as? TripDetailVC else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             

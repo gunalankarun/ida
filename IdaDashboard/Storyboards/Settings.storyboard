@@ -12,7 +12,7 @@
         <!--Settings-->
         <scene sceneID="dTv-h2-V8f">
             <objects>
-                <tableViewController id="aSE-yU-wY0" customClass="SettingsViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aSE-yU-wY0" customClass="SettingsVC" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qTr-a6-3bF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
         <!--Update Account Information-->
         <scene sceneID="aLe-90-kDz">
             <objects>
-                <tableViewController title="Update Account Information" id="aAb-2Z-GeP" customClass="UpdateAccountInfoViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Update Account Information" id="aAb-2Z-GeP" customClass="UpdateAccountInfoVC" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="XiT-QC-JGE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

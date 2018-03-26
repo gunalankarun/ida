@@ -11,22 +11,26 @@
 		290D064F204382EB00CCD8F6 /* ActiveTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */; };
 		292DA457204476BD00722F5E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292DA456204476BD00722F5E /* MapKit.framework */; };
 		389500BC20474607001C7CDA /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389500BB20474607001C7CDA /* FormatDisplay.swift */; };
-		38EF9019204209F70099DBD7 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */; };
-		43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43039347202913D1009E16E4 /* DashboardViewController.swift */; };
-		4303934A20291423009E16E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934920291423009E16E4 /* AccountViewController.swift */; };
+		38EF9019204209F70099DBD7 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF9018204209F70099DBD7 /* CreateAccountVC.swift */; };
+		43039348202913D1009E16E4 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43039347202913D1009E16E4 /* DashboardVC.swift */; };
+		4303934A20291423009E16E4 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303934920291423009E16E4 /* AccountVC.swift */; };
 		435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */; };
 		435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF12020E54F00D3EE75 /* Main.storyboard */; };
 		435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF42020E54F00D3EE75 /* Assets.xcassets */; };
 		435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435BBBF62020E54F00D3EE75 /* LaunchScreen.storyboard */; };
 		435BBC032020E54F00D3EE75 /* IdaDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC022020E54F00D3EE75 /* IdaDashboardTests.swift */; };
 		435BBC0E2020E54F00D3EE75 /* IdaDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */; };
+		437238D620697E9300D692EF /* Seville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 437238D420697E4100D692EF /* Seville-Regular.ttf */; };
+		437238D720697E9800D692EF /* Seville-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 437238D320697E4100D692EF /* Seville-Bold.ttf */; };
+		437238D820697E9C00D692EF /* Seville-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 437238D520697E4100D692EF /* Seville-Book.ttf */; };
+		437238DA206985B100D692EF /* DashCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437238D9206985B100D692EF /* DashCollectionVC.swift */; };
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
 		43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 43D919F5204C896800F268B0 /* UTDrive60.gpx */; };
 		43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */; };
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
-		43E53E1120422F5A007AB1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */; };
-		43E53E1320422FCF007AB1D5 /* UpdateAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */; };
+		43E53E1120422F5A007AB1D5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1020422F5A007AB1D5 /* SettingsVC.swift */; };
+		43E53E1320422FCF007AB1D5 /* UpdateAccountInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E53E1220422FCF007AB1D5 /* UpdateAccountInfoVC.swift */; };
 		7EE56C92664161CB06341D44 /* Pods_IdaDashboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B6B31959AED397659CDC60 /* Pods_IdaDashboardUITests.framework */; };
 		C0EE21FBD37148DE5CDCD76C /* Pods_IdaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0D40DE84EF0B44C8476820 /* Pods_IdaDashboard.framework */; };
 		D1B9D6B92048A89B00A88C94 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9D6B82048A89B00A88C94 /* StorageUtil.swift */; };
@@ -36,8 +40,8 @@
 		E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A11C4203E23FC007D5751 /* Account.storyboard */; };
 		E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F882029002100BF80B5 /* TripTableViewCell.swift */; };
 		E4526F8B2029022400BF80B5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8A2029022400BF80B5 /* Trip.swift */; };
-		E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableViewController.swift */; };
-		E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */; };
+		E4526F8D202906E300BF80B5 /* TripTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8C202906E300BF80B5 /* TripTableVC.swift */; };
+		E4526F8F202B557300BF80B5 /* TripDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4526F8E202B557300BF80B5 /* TripDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +68,9 @@
 		290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTripVC.swift; sourceTree = "<group>"; };
 		292DA456204476BD00722F5E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		389500BB20474607001C7CDA /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
-		38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		43039347202913D1009E16E4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		4303934920291423009E16E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		38EF9018204209F70099DBD7 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		43039347202913D1009E16E4 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		4303934920291423009E16E4 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		435BBBE82020E54E00D3EE75 /* IdaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		435BBBF22020E54F00D3EE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,13 +83,17 @@
 		435BBC092020E54F00D3EE75 /* IdaDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdaDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		435BBC0D2020E54F00D3EE75 /* IdaDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdaDashboardUITests.swift; sourceTree = "<group>"; };
 		435BBC0F2020E54F00D3EE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		437238D320697E4100D692EF /* Seville-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seville-Bold.ttf"; sourceTree = "<group>"; };
+		437238D420697E4100D692EF /* Seville-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seville-Regular.ttf"; sourceTree = "<group>"; };
+		437238D520697E4100D692EF /* Seville-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seville-Book.ttf"; sourceTree = "<group>"; };
+		437238D9206985B100D692EF /* DashCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashCollectionVC.swift; sourceTree = "<group>"; };
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
 		43D919F5204C896800F268B0 /* UTDrive60.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UTDrive60.gpx; sourceTree = "<group>"; };
 		43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountInfoViewController.swift; sourceTree = "<group>"; };
+		43E53E1020422F5A007AB1D5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		43E53E1220422FCF007AB1D5 /* UpdateAccountInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountInfoVC.swift; sourceTree = "<group>"; };
 		6802E00B4C57918C0305F6C7 /* Pods-IdaDashboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardTests/Pods-IdaDashboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		6A862BA61B0347907B126F0D /* Pods-IdaDashboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardTests/Pods-IdaDashboardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7320A78050F51FF8B6C720C4 /* Pods-IdaDashboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardUITests/Pods-IdaDashboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,8 +106,8 @@
 		E42A11C5203E23FC007D5751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
 		E4526F882029002100BF80B5 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		E4526F8A2029022400BF80B5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		E4526F8C202906E300BF80B5 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
-		E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		E4526F8C202906E300BF80B5 /* TripTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableVC.swift; sourceTree = "<group>"; };
+		E4526F8E202B557300BF80B5 /* TripDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailVC.swift; sourceTree = "<group>"; };
 		E951A387F2C134555BD8ED18 /* Pods-IdaDashboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaDashboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdaDashboardUITests/Pods-IdaDashboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +157,7 @@
 		435BBBDF2020E54E00D3EE75 = {
 			isa = PBXGroup;
 			children = (
+				437238D220697E1100D692EF /* fonts */,
 				435BBBEA2020E54E00D3EE75 /* IdaDashboard */,
 				435BBC012020E54F00D3EE75 /* IdaDashboardTests */,
 				435BBC0C2020E54F00D3EE75 /* IdaDashboardUITests */,
@@ -205,6 +214,16 @@
 			path = IdaDashboardUITests;
 			sourceTree = "<group>";
 		};
+		437238D220697E1100D692EF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				437238D320697E4100D692EF /* Seville-Bold.ttf */,
+				437238D520697E4100D692EF /* Seville-Book.ttf */,
+				437238D420697E4100D692EF /* Seville-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		43D919F8204DB4B000F268B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,14 +235,15 @@
 		43D919F9204DB4D800F268B0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4303934920291423009E16E4 /* AccountViewController.swift */,
+				4303934920291423009E16E4 /* AccountVC.swift */,
 				290D064E204382EB00CCD8F6 /* ActiveTripVC.swift */,
-				38EF9018204209F70099DBD7 /* CreateAccountViewController.swift */,
-				43039347202913D1009E16E4 /* DashboardViewController.swift */,
-				43E53E1020422F5A007AB1D5 /* SettingsViewController.swift */,
-				E4526F8E202B557300BF80B5 /* TripDetailViewController.swift */,
-				E4526F8C202906E300BF80B5 /* TripTableViewController.swift */,
-				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoViewController.swift */,
+				38EF9018204209F70099DBD7 /* CreateAccountVC.swift */,
+				43039347202913D1009E16E4 /* DashboardVC.swift */,
+				43E53E1020422F5A007AB1D5 /* SettingsVC.swift */,
+				E4526F8E202B557300BF80B5 /* TripDetailVC.swift */,
+				E4526F8C202906E300BF80B5 /* TripTableVC.swift */,
+				43E53E1220422FCF007AB1D5 /* UpdateAccountInfoVC.swift */,
+				437238D9206985B100D692EF /* DashCollectionVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -381,10 +401,13 @@
 			files = (
 				435BBBF82020E54F00D3EE75 /* LaunchScreen.storyboard in Resources */,
 				435BBBF52020E54F00D3EE75 /* Assets.xcassets in Resources */,
+				437238D620697E9300D692EF /* Seville-Regular.ttf in Resources */,
 				E42A11C3203E23C8007D5751 /* Trips.storyboard in Resources */,
 				43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */,
 				435BBBF32020E54F00D3EE75 /* Main.storyboard in Resources */,
+				437238D720697E9800D692EF /* Seville-Bold.ttf in Resources */,
 				E42A11C6203E23FC007D5751 /* Account.storyboard in Resources */,
+				437238D820697E9C00D692EF /* Seville-Book.ttf in Resources */,
 				43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */,
 				E42A11C0203E238B007D5751 /* Dashboard.storyboard in Resources */,
 				43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */,
@@ -564,19 +587,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38EF9019204209F70099DBD7 /* CreateAccountViewController.swift in Sources */,
+				38EF9019204209F70099DBD7 /* CreateAccountVC.swift in Sources */,
 				E4526F8B2029022400BF80B5 /* Trip.swift in Sources */,
 				290D064F204382EB00CCD8F6 /* ActiveTripVC.swift in Sources */,
 				389500BC20474607001C7CDA /* FormatDisplay.swift in Sources */,
-				43039348202913D1009E16E4 /* DashboardViewController.swift in Sources */,
-				43E53E1120422F5A007AB1D5 /* SettingsViewController.swift in Sources */,
+				437238DA206985B100D692EF /* DashCollectionVC.swift in Sources */,
+				43039348202913D1009E16E4 /* DashboardVC.swift in Sources */,
+				43E53E1120422F5A007AB1D5 /* SettingsVC.swift in Sources */,
 				4394359D20354D8800433495 /* BluetoothIO.swift in Sources */,
-				4303934A20291423009E16E4 /* AccountViewController.swift in Sources */,
+				4303934A20291423009E16E4 /* AccountVC.swift in Sources */,
 				E4526F892029002100BF80B5 /* TripTableViewCell.swift in Sources */,
 				4394359B20321A9C00433495 /* BTData.swift in Sources */,
-				43E53E1320422FCF007AB1D5 /* UpdateAccountInfoViewController.swift in Sources */,
-				E4526F8D202906E300BF80B5 /* TripTableViewController.swift in Sources */,
-				E4526F8F202B557300BF80B5 /* TripDetailViewController.swift in Sources */,
+				43E53E1320422FCF007AB1D5 /* UpdateAccountInfoVC.swift in Sources */,
+				E4526F8D202906E300BF80B5 /* TripTableVC.swift in Sources */,
+				E4526F8F202B557300BF80B5 /* TripDetailVC.swift in Sources */,
 				435BBBEC2020E54E00D3EE75 /* AppDelegate.swift in Sources */,
 				D1B9D6B92048A89B00A88C94 /* StorageUtil.swift in Sources */,
 			);

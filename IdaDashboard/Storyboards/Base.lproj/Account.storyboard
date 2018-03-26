@@ -13,7 +13,7 @@
         <!--Account-->
         <scene sceneID="qkc-VL-Hqp">
             <objects>
-                <viewController id="1fY-dA-Dot" customClass="AccountViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1fY-dA-Dot" customClass="AccountVC" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLC-js-rj5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="1131.1844077961021"/>
         </scene>
-        <!--Create Account View Controller-->
+        <!--Create AccountVC-->
         <scene sceneID="Fu7-Uk-Yic">
             <objects>
-                <viewController id="tCI-02-pt8" customClass="CreateAccountViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tCI-02-pt8" customClass="CreateAccountVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d2S-9B-5RR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

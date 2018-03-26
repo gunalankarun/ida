@@ -14,7 +14,7 @@
         <!--Trips-->
         <scene sceneID="U88-Cf-Soi">
             <objects>
-                <tableViewController id="3Vo-Tf-WNF" customClass="TripTableViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3Vo-Tf-WNF" customClass="TripTableVC" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="30p-hQ-aJD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Trip Detail-->
         <scene sceneID="gXm-Wy-ayE">
             <objects>
-                <viewController title="Trip Detail" id="Gzg-ny-Z83" customClass="TripDetailViewController" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trip Detail" id="Gzg-ny-Z83" customClass="TripDetailVC" customModule="IdaDashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szA-Cp-YX2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

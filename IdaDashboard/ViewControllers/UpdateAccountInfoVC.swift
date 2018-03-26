@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpdateAccountInfoViewController: UITableViewController {
+class UpdateAccountInfoVC: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

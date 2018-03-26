@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 //import Charts
 
-class TripDetailViewController: UIViewController, MKMapViewDelegate {
+class TripDetailVC: UIViewController, MKMapViewDelegate {
 
     // MARK: Properties
     @IBOutlet weak var tripScoreLabel: UILabel!

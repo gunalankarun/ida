@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Seville-Regular.ttf</string>
+		<string>Seville-Book.ttf</string>
+		<string>Seville-Bold.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -27,7 +33,7 @@
 		<string>MKDirectionsModeCar</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Let IDA use phone's location service</string>
+	<string>Let IDA use phone&apos;s location service</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
