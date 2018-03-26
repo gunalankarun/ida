@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TripTableViewController: UITableViewController {
+class TripTableVC: UITableViewController {
     // MARK: Properties
     var trips = [Trip]()
 

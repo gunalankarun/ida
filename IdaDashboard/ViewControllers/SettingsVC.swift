@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class SettingsVC: UITableViewController {
     @IBOutlet weak var connectionStatusLabel: UILabel!
     var bluetoothIOId: Int!
     

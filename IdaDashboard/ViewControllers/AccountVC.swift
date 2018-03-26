@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountVC: UIViewController {
 
     //MARK: Properties
     @IBOutlet weak var usernameTextField: UITextField!
