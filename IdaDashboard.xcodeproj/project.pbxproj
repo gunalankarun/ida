@@ -157,7 +157,6 @@
 		435BBBDF2020E54E00D3EE75 = {
 			isa = PBXGroup;
 			children = (
-				437238D220697E1100D692EF /* fonts */,
 				435BBBEA2020E54E00D3EE75 /* IdaDashboard */,
 				435BBC012020E54F00D3EE75 /* IdaDashboardTests */,
 				435BBC0C2020E54F00D3EE75 /* IdaDashboardUITests */,
@@ -227,6 +226,7 @@
 		43D919F8204DB4B000F268B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				437238D220697E1100D692EF /* fonts */,
 				43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */,
 			);
 			path = Resources;
