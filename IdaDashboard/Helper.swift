@@ -18,6 +18,11 @@ import UIKit
  */
 
 class Helper{
+    static let HARD_BREAK_PENALTY = 0.7
+    static let SHARP_TURN_PENALTY = 0.7
+    static let DROWSINESS_PENALTY = 5.0
+    static let DIST_CONST = 20.0
+    
     static func getRingColor(score:Int) -> UIColor {
         var color:UIColor
         
@@ -33,5 +38,18 @@ class Helper{
             color = UIColor(red:0.30, green:0.69, blue:0.31, alpha:1.0)
         }
         return color
+    }
+    
+    static func calcDriverScore(dist:Double, hard_breaks:Int, sharp_turns:Int,
+                                drowsiness_alerts:Int) -> Double {
+        
+        let hard = Double(hard_breaks)
+        let sharp = Double(sharp_turns)
+        let drowsiness = Double(drowsiness_alerts)
+        
+        let dist_weight = (4.5 * exp(-dist/DIST_CONST)) + 1.5
+        
+        let penalty = hard * HARD_BREAK_PENALTY + sharp * SHARP_TURN_PENALTY + drowsiness * DROWSINESS_PENALTY
+        return 100.0 - dist_weight * penalty
     }
 }
