@@ -26,6 +26,7 @@
 		437238DA206985B100D692EF /* DashCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437238D9206985B100D692EF /* DashCollectionVC.swift */; };
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
+		43BBD1CB206B153F00793629 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBD1CA206B153F00793629 /* ScoreCell.swift */; };
 		43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 43D919F5204C896800F268B0 /* UTDrive60.gpx */; };
 		43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */; };
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
@@ -89,6 +90,7 @@
 		437238D9206985B100D692EF /* DashCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashCollectionVC.swift; sourceTree = "<group>"; };
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
+		43BBD1CA206B153F00793629 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		43D919F5204C896800F268B0 /* UTDrive60.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UTDrive60.gpx; sourceTree = "<group>"; };
 		43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				43D919F9204DB4D800F268B0 /* ViewControllers */,
 				43D919F8204DB4B000F268B0 /* Resources */,
 				435BBBF92020E54F00D3EE75 /* Info.plist */,
+				43BBD1CA206B153F00793629 /* ScoreCell.swift */,
 				435BBBEB2020E54E00D3EE75 /* AppDelegate.swift */,
 				4394359C20354D8800433495 /* BluetoothIO.swift */,
 				4394359A20321A9C00433495 /* BTData.swift */,
@@ -521,11 +524,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-IdaDashboard/Pods-IdaDashboard-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -593,6 +598,7 @@
 				389500BC20474607001C7CDA /* FormatDisplay.swift in Sources */,
 				437238DA206985B100D692EF /* DashCollectionVC.swift in Sources */,
 				43039348202913D1009E16E4 /* DashboardVC.swift in Sources */,
+				43BBD1CB206B153F00793629 /* ScoreCell.swift in Sources */,
 				43E53E1120422F5A007AB1D5 /* SettingsVC.swift in Sources */,
 				4394359D20354D8800433495 /* BluetoothIO.swift in Sources */,
 				4303934A20291423009E16E4 /* AccountVC.swift in Sources */,

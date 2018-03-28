@@ -19,5 +19,6 @@ target 'IdaDashboard' do
 
   pod 'Charts'
   pod 'SwiftySound'
+  pod 'UICircularProgressRing'
 
 end

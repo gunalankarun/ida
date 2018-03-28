@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import UICircularProgressRing
 
-class DashCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class DashCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, UICircularProgressRingDelegate {
+    
+    @IBOutlet weak var scoreRing: UICircularProgressRingView!
+    
     let cellIdentifiers = ["ScoreCell","DashCell1","DashCell2","DashCell3","DashCell4","StartTripCell"]
     let cellSizes = [
         CGSize(width:375, height:205),
@@ -28,6 +32,12 @@ class DashCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifiers[indexPath.item], for: indexPath)
+        if (indexPath.item == 0) {
+            let scoreCell:ScoreCell = cell as! ScoreCell
+            scoreCell.scoreRing.animationStyle = kCAMediaTimingFunctionLinear
+            scoreCell.scoreRing.delegate = self
+            scoreCell.scoreRing.setProgress(value: 92, animationDuration: 2)
+        }
         if (indexPath.item < 5) {
             cell.contentView.layer.borderColor = UIColor(red:0.75, green:0.75, blue:0.75, alpha:1.0).cgColor
             cell.contentView.layer.borderWidth = 0.5
@@ -47,6 +57,10 @@ class DashCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
     override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.backgroundColor = UIColor.white.cgColor
+    }
+    
+    func finishedUpdatingProgress(forRing ring: UICircularProgressRingView) {
+        print("From delegate: ScoreRing finished")
     }
 
 
