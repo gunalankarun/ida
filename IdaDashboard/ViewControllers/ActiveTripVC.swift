@@ -17,12 +17,11 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     var bluetoothIO: BluetoothIO!
     var bluetoothDelegateId: Int!
 
-    // UIs
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var lSpeed: UILabel!
     @IBOutlet weak var lDistance: UILabel!
     @IBOutlet weak var lTime: UILabel!
     
+    @IBOutlet weak var mapView: MKMapView!
     // vars for location
     private let locationManager = CLLocationManager()
     private let motionManager = CMMotionManager()
@@ -139,19 +138,15 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             formatter.dateFormat = "MM.dd.yyyy"
             let dateStr = formatter.string(from: date)
             let title = "Trip on: " + dateStr
-            
-//            print ("saving the trip")
-//            for loc in self.locationList2 {
-//                print (loc.coordinate.latitude.description + " " + loc.coordinate.longitude.description)
-//            }
+
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  accelerometer: self.accelerometer, gyroscope: self.gyroscope, locations: self.locationList)
             self.cleanup()
-            self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
+            self.dismiss(animated: true, completion: nil)
         })
         alert.addAction(UIAlertAction(title:"Don't Save", style: UIAlertActionStyle.default) { _ in
             self.cleanup()
-            self.performSegue(withIdentifier: "unwindToDashboard", sender: self)
+            self.dismiss(animated: true, completion: nil)
         })
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel))
         self.present(alert, animated: true)
