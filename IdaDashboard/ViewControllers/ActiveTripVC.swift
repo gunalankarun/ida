@@ -201,12 +201,12 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
 }
 
 extension ActiveTripVC: BluetoothIODelegate {
-    static let ALERT: Int8 = 49
+    static let NO_ALERT: Int8 = 48
     
     func bluetoothIO(bluetoothIO: BluetoothIO, didReceiveValue value: Int8) {
         print(value)
         
-        if value == ActiveTripVC.ALERT && self.presentedViewController == nil {
+        if value != ActiveTripVC.NO_ALERT && self.presentedViewController == nil {
             let alertController = UIAlertController(title: "Drowsy Alert", message: "You are falling asleep!", preferredStyle: .alert)
             
             Sound.stopAll()
