@@ -56,7 +56,8 @@ class TripTableVC: UITableViewController {
         cell.tripLabel.text = trip.title
         cell.startLabel.text = convertToString(date: trip.start)
         cell.mpgLabel.text = String(format: "MPG: %.1f", trip.mpg)
-        cell.scoreLabel.text = String(format: "%d", trip.score)
+        cell.scoreRing.innerRingColor = Helper.getRingColor(score: trip.score)
+        cell.scoreRing.setProgress(value: CGFloat(trip.score), animationDuration: 2)
         
         return cell
     }

@@ -24,6 +24,11 @@ class Trip: NSObject, NSCoding {
     var gyroscope: [CMGyroData?]
     var locations: [CLLocation?]
     
+    //TODO: Track these 3 metrics during the trip
+    //var sharp_turns: Double
+    //var hard_breaks: Double
+    //var drowsiness_alerts: Double
+    
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("Trips")
@@ -41,6 +46,9 @@ class Trip: NSObject, NSCoding {
         static let accelerometer = "accelerometer"
         static let gyroscope = "gyroscope"
         static let locations = "locations"
+        static let sharp_turns = "sharp_turns"
+        static let hard_breaks = "hard_breaks"
+        static let drowsiness_alerts = "drowsiness_alerts"
     }
     
     

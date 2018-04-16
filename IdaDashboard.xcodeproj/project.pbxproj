@@ -27,6 +27,7 @@
 		4394359B20321A9C00433495 /* BTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359A20321A9C00433495 /* BTData.swift */; };
 		4394359D20354D8800433495 /* BluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394359C20354D8800433495 /* BluetoothIO.swift */; };
 		43BBD1CB206B153F00793629 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBD1CA206B153F00793629 /* ScoreCell.swift */; };
+		43BBD1CD206BEE1C00793629 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBD1CC206BEE1C00793629 /* Helper.swift */; };
 		43D919F6204C896800F268B0 /* UTDrive60.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 43D919F5204C896800F268B0 /* UTDrive60.gpx */; };
 		43D919FC204DBB4C00F268B0 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */; };
 		43E53E0F20421B8B007AB1D5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E53E0E20421B8B007AB1D5 /* Settings.storyboard */; };
@@ -91,6 +92,7 @@
 		4394359A20321A9C00433495 /* BTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTData.swift; sourceTree = "<group>"; };
 		4394359C20354D8800433495 /* BluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothIO.swift; sourceTree = "<group>"; };
 		43BBD1CA206B153F00793629 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		43BBD1CC206BEE1C00793629 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		43D919F5204C896800F268B0 /* UTDrive60.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UTDrive60.gpx; sourceTree = "<group>"; };
 		43D919FB204DBB4C00F268B0 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		43E53E0E20421B8B007AB1D5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				E4526F8A2029022400BF80B5 /* Trip.swift */,
 				E4526F882029002100BF80B5 /* TripTableViewCell.swift */,
 				435BBBF42020E54F00D3EE75 /* Assets.xcassets */,
+				43BBD1CC206BEE1C00793629 /* Helper.swift */,
 			);
 			path = IdaDashboard;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				290D064F204382EB00CCD8F6 /* ActiveTripVC.swift in Sources */,
 				389500BC20474607001C7CDA /* FormatDisplay.swift in Sources */,
 				437238DA206985B100D692EF /* DashCollectionVC.swift in Sources */,
+				43BBD1CD206BEE1C00793629 /* Helper.swift in Sources */,
 				43039348202913D1009E16E4 /* DashboardVC.swift in Sources */,
 				43BBD1CB206B153F00793629 /* ScoreCell.swift in Sources */,
 				43E53E1120422F5A007AB1D5 /* SettingsVC.swift in Sources */,
