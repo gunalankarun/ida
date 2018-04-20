@@ -41,15 +41,15 @@ class SettingsVC: UITableViewController {
         }
     }
     
-    @IBAction func startCalibration(_ sender: UIButton) {
+    @IBAction func startOpenCalibration(_ sender: UIButton) {
         let bluetoothIO = BluetoothIO.shared
         // Create the alert controller
-        let alertController = UIAlertController(title: "Calibration Instructions", message: "When ready click ok and look at the camera for 5 seconds.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Open-eye Calibration", message: "When ready click ok and look at the camera for 5 seconds.", preferredStyle: .alert)
         
         // Create ok actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
             UIAlertAction in
-            print("OK Pressed")
+            print("Open-eye calibration started.")
             bluetoothIO.writeValue(value: 1)
         }
         
@@ -58,7 +58,25 @@ class SettingsVC: UITableViewController {
         
         // Present the controller
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func startClosedCalibration(_ sender: UIButton) {
+        let bluetoothIO = BluetoothIO.shared
+        // Create the alert controller
+        let alertController = UIAlertController(title: "Closed-eye Calibration", message: "When ready click ok and close your eyes for 5 seconds.", preferredStyle: .alert)
         
+        // Create ok actions
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            print("Closed-eye calibration started.")
+            bluetoothIO.writeValue(value: 4)
+        }
+        
+        // Add the action
+        alertController.addAction(okAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
