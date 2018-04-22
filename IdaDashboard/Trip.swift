@@ -20,13 +20,14 @@ class Trip: NSObject, NSCoding {
     var score: Int
     var distance: Double
     var cost: Double
-    var accelerometer: [CMAccelerometerData?]
-    var gyroscope: [CMGyroData?]
+    var motion: [CMDeviceMotion]
     var locations: [CLLocation?]
+    var sharpLeft: Int
+    var sharpRight: Int
+    var hardBrake: Int
+    var hardAccel: Int
     
     //TODO: Track these 3 metrics during the trip
-    //var sharp_turns: Double
-    //var hard_breaks: Double
     //var drowsiness_alerts: Double
     
     //MARK: Archiving Paths
@@ -43,19 +44,19 @@ class Trip: NSObject, NSCoding {
         static let score = "score"
         static let distance = "distance"
         static let cost = "cost"
-        static let accelerometer = "accelerometer"
-        static let gyroscope = "gyroscope"
+        static let motion = "motion"
         static let locations = "locations"
-        static let sharp_turns = "sharp_turns"
-        static let hard_breaks = "hard_breaks"
+        static let sharpLeft = "sharp_left"
+        static let sharpRight = "sharp_right"
+        static let hardBrake = "hard_brake"
+        static let hardAccel = "hard_accel"
         static let drowsiness_alerts = "drowsiness_alerts"
     }
     
     
     // MARK: Initialization
     init?(title: String, start: Date, end: Date, mpg: Double, score: Int,
-          distance: Double, cost: Double, accelerometer: [CMAccelerometerData?],
-          gyroscope: [CMGyroData?], locations: [CLLocation?]) {
+          distance: Double, cost: Double, motion: [CMDeviceMotion], sharpRightTurn: Int, sharpLeftTurn: Int, hardBrake: Int, hardAccel: Int, locations: [CLLocation?]) {
         // Title must not be empty
         guard !title.isEmpty else {
             return nil
@@ -89,8 +90,11 @@ class Trip: NSObject, NSCoding {
         self.score = score
         self.distance = distance
         self.cost = cost
-        self.accelerometer = accelerometer
-        self.gyroscope = gyroscope
+        self.motion = motion
+        self.sharpLeft = sharpLeftTurn
+        self.sharpRight = sharpRightTurn
+        self.hardBrake = hardBrake
+        self.hardAccel = hardAccel
         self.locations = locations
     }
     
@@ -105,22 +109,14 @@ class Trip: NSObject, NSCoding {
         contents += String(distance) + "\n"
         contents += String(cost) + "\n"
         contents += "\n"
-        contents += "i,accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z\n"
+        contents += "time,accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z\n"
         
-        let length = max(accelerometer.count, gyroscope.count)
-        
-        for i in stride(from: 0, to: length - 1, by:1) {
-            var line: String = String(i)
-            if i < accelerometer.count, let a = accelerometer[i]?.acceleration {
-                line += "," + String(a.x) + "," + String(a.y) + "," + String(a.z)
-            } else {
-                line += ",,,"
-            }
-            if i < gyroscope.count, let g = gyroscope[i]?.rotationRate {
-                line += "," + String(g.x) + "," + String(g.y) + "," + String(g.z)
-            } else {
-                line += ",,,"
-            }
+        for i in stride(from: 0, to: motion.count - 1, by:1) {
+            var line: String = String(motion[i].timestamp)
+            let a = motion[i].userAcceleration
+            let g = motion[i].rotationRate
+            line += "," + String(a.x) + "," + String(a.y) + "," + String(a.z)
+            line += "," + String(g.x) + "," + String(g.y) + "," + String(g.z)
             contents += line + "\n"
         }
         
@@ -157,11 +153,12 @@ class Trip: NSObject, NSCoding {
         aCoder.encode(score, forKey: PropertyKey.score)
         aCoder.encode(distance, forKey: PropertyKey.distance)
         aCoder.encode(cost, forKey: PropertyKey.cost)
-        aCoder.encode(accelerometer, forKey: PropertyKey.accelerometer)
-        aCoder.encode(gyroscope, forKey: PropertyKey.gyroscope)
-        print ("encoding")
+        aCoder.encode(motion, forKey: PropertyKey.motion)
+        aCoder.encode(sharpLeft, forKey: PropertyKey.sharpLeft)
+        aCoder.encode(sharpRight, forKey: PropertyKey.sharpRight)
+        aCoder.encode(hardAccel, forKey: PropertyKey.hardAccel)
+        aCoder.encode(hardBrake, forKey: PropertyKey.hardBrake)
         aCoder.encode(locations, forKey: PropertyKey.locations)
-        print ("encoded")
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -178,13 +175,14 @@ class Trip: NSObject, NSCoding {
         let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
         let distance = aDecoder.decodeDouble(forKey: PropertyKey.distance)
         let cost = aDecoder.decodeDouble(forKey: PropertyKey.cost)
-        let accelerometer = aDecoder.decodeObject(forKey: PropertyKey.accelerometer) as? [CMAccelerometerData?]
-        let gyroscope = aDecoder.decodeObject(forKey: PropertyKey.gyroscope) as! [CMGyroData?]
-        print ("decoding")
+        let motion = aDecoder.decodeObject(forKey: PropertyKey.motion) as! [CMDeviceMotion]
+        let sharpLeft = aDecoder.decodeInteger(forKey: PropertyKey.sharpLeft)
+        let sharpRight = aDecoder.decodeInteger(forKey: PropertyKey.sharpRight)
+        let hardAccel = aDecoder.decodeInteger(forKey: PropertyKey.hardAccel)
+        let hardBrake = aDecoder.decodeInteger(forKey: PropertyKey.hardBrake)
         let locations = aDecoder.decodeObject(forKey: PropertyKey.locations) as! [CLLocation?]
-        print ("decoded")
         // Must call designated initializer.
-        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer!, gyroscope: gyroscope, locations: locations)
+        self.init(title: title, start:start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, motion: motion, sharpRightTurn: sharpRight, sharpLeftTurn: sharpLeft, hardBrake: hardBrake, hardAccel: hardAccel, locations: locations)
     }
     
     public func toString() -> String {

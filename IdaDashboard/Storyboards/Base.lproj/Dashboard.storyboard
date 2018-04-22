@@ -257,17 +257,29 @@
                                             <navigationItem title="Current Trip" id="oQQ-wz-Ydo"/>
                                         </items>
                                     </navigationBar>
-                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aQO-iT-n7f">
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aQO-iT-n7f">
                                         <rect key="frame" x="0.0" y="44" width="375" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Current Speed: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgE-Mc-nGu" userLabel="Current speed:">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgE-Mc-nGu" userLabel="Current speed:">
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1F5-ld-r3n">
-                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="50"/>
+                                                <rect key="frame" x="139" y="0.0" width="25.333333333333343" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-45-pzw">
+                                                <rect key="frame" x="164.33333333333331" y="0.0" width="185.33333333333331" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btX-WR-UlS">
+                                                <rect key="frame" x="349.66666666666669" y="0.0" width="25.333333333333314" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -277,51 +289,17 @@
                                             <constraint firstAttribute="height" constant="50" id="uy6-Iu-5P1"/>
                                         </constraints>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfJ-Fb-Jk8">
-                                        <rect key="frame" x="0.0" y="94" width="375" height="2"/>
-                                        <color key="backgroundColor" red="0.83014896370000002" green="0.83014896370000002" blue="0.83014896370000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="jhH-OW-5Kp"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAt-s0-DgL">
-                                        <rect key="frame" x="0.0" y="96" width="375" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" Distance traveled:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo4-ic-9wS">
-                                                <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="50"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
-                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-0M-cup">
-                                                <rect key="frame" x="189.33333333333337" y="0.0" width="185.66666666666663" height="50"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
-                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dt9-Rs-CMs"/>
-                                        </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spz-ha-hH3">
-                                        <rect key="frame" x="0.0" y="146" width="375" height="2"/>
-                                        <color key="backgroundColor" red="0.83014896370000002" green="0.83014896370000002" blue="0.83014896370000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="JHx-SW-pn7"/>
-                                        </constraints>
-                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2L-lO-i5E">
-                                        <rect key="frame" x="0.0" y="148" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="94" width="375" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" Total time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-cd-kDf">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trip time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-cd-kDf">
+                                                <rect key="frame" x="0.0" y="0.0" width="96.333333333333329" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-He-liq">
-                                                <rect key="frame" x="114.33333333333334" y="0.0" width="260.66666666666663" height="50"/>
+                                                <rect key="frame" x="96.333333333333343" y="0.0" width="278.66666666666663" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -331,8 +309,72 @@
                                             <constraint firstAttribute="height" constant="50" id="aE9-F2-Yg2"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Xzh-KL-SJi">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharp Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTH-wv-tRU">
+                                                <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-Lv-r5e">
+                                                <rect key="frame" x="160.33333333333334" y="0.0" width="18.333333333333343" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharp Right: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi7-Cx-rex">
+                                                <rect key="frame" x="178.66666666666669" y="0.0" width="177.66666666666669" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbc-5z-dLz">
+                                                <rect key="frame" x="356.33333333333331" y="0.0" width="18.666666666666686" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ipi-Of-ly2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Mjq-Na-8nJ">
+                                        <rect key="frame" x="0.0" y="194" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Brake:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIo-f7-ota">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.33333333333334" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3l-tb-c8J">
+                                                <rect key="frame" x="169.33333333333334" y="0.0" width="19.333333333333343" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Accel:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-My-Afe">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="167" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1f-rQ-LS1">
+                                                <rect key="frame" x="355.66666666666669" y="0.0" width="19.333333333333314" height="50"/>
+                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lI6-LE-xCr"/>
+                                        </constraints>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-co-q8w">
-                                        <rect key="frame" x="0.0" y="198" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="244" width="375" height="40"/>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="f2i-bJ-41J"/>
@@ -342,7 +384,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zro-Az-0Do">
-                                        <rect key="frame" x="0.0" y="238" width="375" height="452"/>
+                                        <rect key="frame" x="0.0" y="284" width="375" height="406"/>
                                     </mapView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me4-ud-FZ0">
                                         <rect key="frame" x="0.0" y="690" width="375" height="48"/>
@@ -361,14 +403,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zro-Az-0Do" firstAttribute="top" secondItem="Vuc-co-q8w" secondAttribute="bottom" id="1Y2-S3-O9t"/>
-                                    <constraint firstItem="Spz-ha-hH3" firstAttribute="top" secondItem="pAt-s0-DgL" secondAttribute="bottom" constant="15" id="3LB-5d-lRf"/>
-                                    <constraint firstItem="pAt-s0-DgL" firstAttribute="top" secondItem="lfJ-Fb-Jk8" secondAttribute="bottom" constant="15" id="6Sy-cf-JXq"/>
-                                    <constraint firstItem="lfJ-Fb-Jk8" firstAttribute="top" secondItem="aQO-iT-n7f" secondAttribute="bottom" constant="15" id="9z6-co-McR"/>
-                                    <constraint firstItem="Q2L-lO-i5E" firstAttribute="top" secondItem="Spz-ha-hH3" secondAttribute="bottom" constant="15" id="K6d-xn-k19"/>
                                     <constraint firstItem="Me4-ud-FZ0" firstAttribute="top" secondItem="zro-Az-0Do" secondAttribute="bottom" id="Qbd-yG-ZlP"/>
-                                    <constraint firstItem="Vuc-co-q8w" firstAttribute="top" secondItem="Q2L-lO-i5E" secondAttribute="bottom" constant="15" id="RYw-xS-xr4"/>
-                                    <constraint firstAttribute="trailing" secondItem="aQO-iT-n7f" secondAttribute="trailing" constant="16" id="VZS-3p-BLR"/>
-                                    <constraint firstItem="zro-Az-0Do" firstAttribute="top" secondItem="Vuc-co-q8w" secondAttribute="bottom" id="nEl-OI-xoh"/>
+                                    <constraint firstItem="Vuc-co-q8w" firstAttribute="top" secondItem="Xzh-KL-SJi" secondAttribute="bottom" constant="50" id="RYw-xS-xr4"/>
+                                    <constraint firstItem="Vuc-co-q8w" firstAttribute="trailing" secondItem="Mjq-Na-8nJ" secondAttribute="trailing" id="XTo-6q-hRv"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -382,7 +419,11 @@
                         <viewLayoutGuide key="safeArea" id="A5d-MJ-m1Q"/>
                     </view>
                     <connections>
-                        <outlet property="lDistance" destination="vMc-0M-cup" id="JSt-1p-4QV"/>
+                        <outlet property="lDistance" destination="btX-WR-UlS" id="rSe-I4-kum"/>
+                        <outlet property="lHardAccel" destination="G1f-rQ-LS1" id="Tav-F0-FLW"/>
+                        <outlet property="lHardBrake" destination="e3l-tb-c8J" id="krw-d5-Sg7"/>
+                        <outlet property="lSharpLeft" destination="w6Y-Lv-r5e" id="wzd-Q2-QOw"/>
+                        <outlet property="lSharpRight" destination="Hbc-5z-dLz" id="WEI-tb-8Rt"/>
                         <outlet property="lSpeed" destination="1F5-ld-r3n" id="Esh-HC-UUh"/>
                         <outlet property="lTime" destination="vfA-He-liq" id="rQv-lZ-pTI"/>
                         <outlet property="mapView" destination="zro-Az-0Do" id="cy0-tj-tgt"/>
