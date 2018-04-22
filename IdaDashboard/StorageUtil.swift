@@ -14,8 +14,9 @@ import os.log
 struct StorageUtil {
     static func saveTrip(title: String, start: Date, end: Date, mpg: Double,
                          score: Int, distance: Double, cost: Double,
-                         accelerometer: [CMAccelerometerData?], gyroscope: [CMGyroData?], locations:[CLLocation?]) {
-        let trip = Trip(title: title,start: start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, accelerometer: accelerometer, gyroscope: gyroscope, locations: locations)
+                         motion: [CMDeviceMotion], sharpLeftTurn: Int, sharpRightTurn: Int,
+                         hardBrake: Int, hardAccel: Int, locations:[CLLocation?]) {
+        let trip = Trip(title: title,start: start, end: end, mpg: mpg, score: score, distance: distance, cost: cost, motion: motion, sharpRightTurn: sharpRightTurn, sharpLeftTurn: sharpLeftTurn, hardBrake: hardBrake, hardAccel: hardAccel, locations: locations)
        
         var trips = [Trip]()
         

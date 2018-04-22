@@ -22,17 +22,28 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lTime: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
-    // vars for location
+    
+    // queue for the moion manager
+    private let queue = OperationQueue()
+    
+    // vals for location
     private let locationManager = CLLocationManager()
     private let motionManager = CMMotionManager()
     
+    // vals for acceleromter/gyroscope thresholds
+    private let sharpTurnThresh = 0.3
+    private let hardAccelThresh = 0.4
+
     // vars for new trip
     private var seconds = 0
     private var timer: Timer?
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
-    private var accelerometer: [CMAccelerometerData?] = []
-    private var gyroscope: [CMGyroData?] = []
+    private var motionList: [CMDeviceMotion] = []
+    private var sharpLeftTurnCount = 0
+    private var sharpRightTurnCount = 0
+    private var hardBrakeCount = 0
+    private var hardAccelCount = 0
     
     // MARK: Overrides
     
@@ -42,7 +53,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        getData()
+        startMotionUpdates()
         
         bluetoothIO = BluetoothIO.shared
         bluetoothDelegateId = bluetoothIO.registerDelegate(delegate: self)
@@ -88,47 +99,33 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         lTime.text = "\(formattedTime)"
     }
     
-    private func getData() {
-        if (self.motionManager.isAccelerometerAvailable) {
-            print("acquiring acceleration")
-            self.acquireAcceleration()
-        }
-        if (self.motionManager.isGyroAvailable) {
-            print("acquiring gyroscope")
-            self.acquireGyro()
-        }
-    }
-    
-    private func acquireAcceleration() {
-        self.motionManager.accelerometerUpdateInterval = 1/10
-        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!,
-                                     withHandler: {
-            (data: CMAccelerometerData?, error: Error?) in
-            DispatchQueue.main.async(execute: { () in
-                if(error != nil) {
-                    self.accelerometer.append(nil)
-                } else {
-                    self.accelerometer.append(data)
-                }
+    private func startMotionUpdates() {
+        if self.motionManager.isDeviceMotionAvailable {
+            self.motionManager.deviceMotionUpdateInterval = 1.0/60.0
+            self.motionManager.showsDeviceMovementDisplay = true
+            self.motionManager.startDeviceMotionUpdates(using: .xMagneticNorthZVertical,
+                            to: self.queue, withHandler: { (data, error) in
+                            // Make sure the data is valid before accessing it.
+                            if let validData = data {
+                                self.motionList.append(validData)
+                                self.processMotionData(validData: validData)
+                            }
             })
-        })
+        }
     }
     
-    private func acquireGyro() {
-        self.motionManager.gyroUpdateInterval = 1/10
-        self.motionManager.startGyroUpdates(to: OperationQueue.current!,
-                                    withHandler: {
-            (data: CMGyroData?, error: Error?) in
-            DispatchQueue.main.async(execute: { () in
-                if(error != nil) {
-                    self.gyroscope.append(nil)
-                } else {
-                    self.gyroscope.append(data)
-                }
-            })
-        })
+    private func processMotionData(validData: CMDeviceMotion) {
+        if(validData.userAcceleration.x > sharpTurnThresh) {
+            sharpRightTurnCount += 1
+        } else if(validData.userAcceleration.x < -sharpTurnThresh) {
+            sharpLeftTurnCount += 1
+        }
+        if(validData.userAcceleration.y > hardAccelThresh) {
+            hardAccelCount += 1
+        } else if(validData.userAcceleration.y < -hardAccelThresh) {
+            hardAccelCount += 1
+        }
     }
-    
     
     @IBAction func endTrip(_ sender: Any) {
         let alert = UIAlertController(title: "End Trip", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.actionSheet)
@@ -140,7 +137,10 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             let title = "Trip on: " + dateStr
 
             StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
-                                 accelerometer: self.accelerometer, gyroscope: self.gyroscope, locations: self.locationList)
+                                 motion: self.motionList, sharpLeftTurn: self.sharpLeftTurnCount,
+                                 sharpRightTurn: self.sharpRightTurnCount,
+                                 hardBrake: self.hardBrakeCount, hardAccel: self.hardAccelCount,
+                                 locations: self.locationList)
             self.cleanup()
             self.dismiss(animated: true, completion: nil)
         })
