@@ -37,6 +37,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     // vals for acceleromter/gyroscope thresholds
     private let sharpTurnThresh = 0.3
     private let hardAccelThresh = 0.4
+    private let delayThresh = 5.0
 
     // vars for new trip
     private var seconds = 0
@@ -48,6 +49,8 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     private var sharpRightTurnCount = 0
     private var hardBrakeCount = 0
     private var hardAccelCount = 0
+    private var lastTurnEvent: TimeInterval = 0
+    private var lastAccelEvent: TimeInterval = 0
     
     // MARK: Overrides
     
@@ -100,8 +103,10 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         
         seconds += 1
         
-        lDistance.text = "\(formattedDistance)"
-        lTime.text = "\(formattedTime)"
+        DispatchQueue.main.async {
+            self.lDistance.text = "\(formattedDistance)"
+            self.lTime.text = "\(formattedTime)"
+        }
     }
     
     private func startMotionUpdates() {
@@ -120,26 +125,38 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     }
     
     private func processMotionData(validData: CMDeviceMotion) {
-        if(validData.userAcceleration.x > sharpTurnThresh) {
-            sharpRightTurnCount += 1
-            DispatchQueue.main.async {
-                self.lSharpRight.text = String(self.sharpRightTurnCount)
-            }
-        } else if(validData.userAcceleration.x < -sharpTurnThresh) {
-            sharpLeftTurnCount += 1
-            DispatchQueue.main.async {
-                self.lSharpLeft.text = String(self.sharpLeftTurnCount)
+        if(validData.timestamp - lastTurnEvent > delayThresh) {
+            if(validData.userAcceleration.x > sharpTurnThresh) {
+                print(validData.userAcceleration.x)
+                sharpRightTurnCount += 1
+                lastTurnEvent = validData.timestamp
+                DispatchQueue.main.async {
+                    self.lSharpRight.text = String(self.sharpRightTurnCount)
+                }
+            } else if(validData.userAcceleration.x < -sharpTurnThresh) {
+                print(validData.userAcceleration.x)
+                sharpLeftTurnCount += 1
+                lastTurnEvent = validData.timestamp
+                DispatchQueue.main.async {
+                    self.lSharpLeft.text = String(self.sharpLeftTurnCount)
+                }
             }
         }
-        if(validData.userAcceleration.y > hardAccelThresh) {
-            hardAccelCount += 1
-            DispatchQueue.main.async {
-                self.lHardAccel.text = String(self.hardAccelCount)
-            }
-        } else if(validData.userAcceleration.y < -hardAccelThresh) {
-            hardBrakeCount += 1
-            DispatchQueue.main.async {
-                self.lHardBrake.text = String(self.hardBrakeCount)
+        if(validData.timestamp - lastAccelEvent > delayThresh) {
+            if(validData.userAcceleration.y > hardAccelThresh) {
+                print(validData.userAcceleration.y)
+                hardAccelCount += 1
+                lastAccelEvent = validData.timestamp
+                DispatchQueue.main.async {
+                    self.lHardAccel.text = String(self.hardAccelCount)
+                }
+            } else if(validData.userAcceleration.y < -hardAccelThresh) {
+                print(validData.userAcceleration.y)
+                hardBrakeCount += 1
+                lastAccelEvent = validData.timestamp
+                DispatchQueue.main.async {
+                    self.lHardBrake.text = String(self.hardBrakeCount)
+                }
             }
         }
     }
