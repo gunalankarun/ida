@@ -20,6 +20,10 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lSpeed: UILabel!
     @IBOutlet weak var lDistance: UILabel!
     @IBOutlet weak var lTime: UILabel!
+    @IBOutlet weak var lSharpLeft: UILabel!
+    @IBOutlet weak var lSharpRight: UILabel!
+    @IBOutlet weak var lHardBrake: UILabel!
+    @IBOutlet weak var lHardAccel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -117,13 +121,17 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     private func processMotionData(validData: CMDeviceMotion) {
         if(validData.userAcceleration.x > sharpTurnThresh) {
             sharpRightTurnCount += 1
+            lSharpRight.text = String(sharpRightTurnCount)
         } else if(validData.userAcceleration.x < -sharpTurnThresh) {
             sharpLeftTurnCount += 1
+            lSharpLeft.text = String(sharpLeftTurnCount)
         }
         if(validData.userAcceleration.y > hardAccelThresh) {
             hardAccelCount += 1
+            lHardAccel.text = String(hardAccelCount)
         } else if(validData.userAcceleration.y < -hardAccelThresh) {
-            hardAccelCount += 1
+            hardBrakeCount += 1
+            lHardBrake.text = String(hardBrakeCount)
         }
     }
     
