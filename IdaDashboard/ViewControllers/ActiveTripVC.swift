@@ -68,6 +68,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         super.viewWillDisappear(animated)
         timer?.invalidate()
         locationManager.stopUpdatingLocation()
+        motionManager.stopDeviceMotionUpdates()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,17 +122,25 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     private func processMotionData(validData: CMDeviceMotion) {
         if(validData.userAcceleration.x > sharpTurnThresh) {
             sharpRightTurnCount += 1
-            lSharpRight.text = String(sharpRightTurnCount)
+            DispatchQueue.main.async {
+                self.lSharpRight.text = String(self.sharpRightTurnCount)
+            }
         } else if(validData.userAcceleration.x < -sharpTurnThresh) {
             sharpLeftTurnCount += 1
-            lSharpLeft.text = String(sharpLeftTurnCount)
+            DispatchQueue.main.async {
+                self.lSharpLeft.text = String(self.sharpLeftTurnCount)
+            }
         }
         if(validData.userAcceleration.y > hardAccelThresh) {
             hardAccelCount += 1
-            lHardAccel.text = String(hardAccelCount)
+            DispatchQueue.main.async {
+                self.lHardAccel.text = String(self.hardAccelCount)
+            }
         } else if(validData.userAcceleration.y < -hardAccelThresh) {
             hardBrakeCount += 1
-            lHardBrake.text = String(hardBrakeCount)
+            DispatchQueue.main.async {
+                self.lHardBrake.text = String(self.hardBrakeCount)
+            }
         }
     }
     
