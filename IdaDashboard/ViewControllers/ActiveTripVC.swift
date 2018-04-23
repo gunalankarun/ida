@@ -49,8 +49,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     private var sharpRightTurnCount = 0
     private var hardBrakeCount = 0
     private var hardAccelCount = 0
-    private var lastTurnEvent: TimeInterval = 0
-    private var lastAccelEvent: TimeInterval = 0
+    private var lastEvent: TimeInterval = 0
     
     // MARK: Overrides
     
@@ -125,38 +124,37 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
     }
     
     private func processMotionData(validData: CMDeviceMotion) {
-        if(validData.timestamp - lastTurnEvent > delayThresh) {
-            if(validData.userAcceleration.x > sharpTurnThresh) {
-                print(validData.userAcceleration.x)
-                sharpRightTurnCount += 1
-                lastTurnEvent = validData.timestamp
-                DispatchQueue.main.async {
-                    self.lSharpRight.text = String(self.sharpRightTurnCount)
-                }
-            } else if(validData.userAcceleration.x < -sharpTurnThresh) {
-                print(validData.userAcceleration.x)
-                sharpLeftTurnCount += 1
-                lastTurnEvent = validData.timestamp
-                DispatchQueue.main.async {
-                    self.lSharpLeft.text = String(self.sharpLeftTurnCount)
-                }
+        if(validData.timestamp - lastEvent < delayThresh) {
+            return
+        }
+        if(validData.userAcceleration.x > sharpTurnThresh) {
+            print(validData.userAcceleration.x)
+            sharpRightTurnCount += 1
+            lastEvent = validData.timestamp
+            DispatchQueue.main.async {
+                self.lSharpRight.text = String(self.sharpRightTurnCount)
+            }
+        } else if(validData.userAcceleration.x < -sharpTurnThresh) {
+            print(validData.userAcceleration.x)
+            sharpLeftTurnCount += 1
+            lastEvent = validData.timestamp
+            DispatchQueue.main.async {
+                self.lSharpLeft.text = String(self.sharpLeftTurnCount)
             }
         }
-        if(validData.timestamp - lastAccelEvent > delayThresh) {
-            if(validData.userAcceleration.y > hardAccelThresh) {
-                print(validData.userAcceleration.y)
-                hardAccelCount += 1
-                lastAccelEvent = validData.timestamp
-                DispatchQueue.main.async {
-                    self.lHardAccel.text = String(self.hardAccelCount)
-                }
-            } else if(validData.userAcceleration.y < -hardAccelThresh) {
-                print(validData.userAcceleration.y)
-                hardBrakeCount += 1
-                lastAccelEvent = validData.timestamp
-                DispatchQueue.main.async {
-                    self.lHardBrake.text = String(self.hardBrakeCount)
-                }
+        else if(validData.userAcceleration.y > hardAccelThresh) {
+            print(validData.userAcceleration.y)
+            hardAccelCount += 1
+            lastEvent = validData.timestamp
+            DispatchQueue.main.async {
+                self.lHardAccel.text = String(self.hardAccelCount)
+            }
+        } else if(validData.userAcceleration.y < -hardAccelThresh) {
+            print(validData.userAcceleration.y)
+            hardBrakeCount += 1
+            lastEvent = validData.timestamp
+            DispatchQueue.main.async {
+                self.lHardBrake.text = String(self.hardBrakeCount)
             }
         }
     }
