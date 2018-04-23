@@ -127,28 +127,28 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         if(validData.timestamp - lastEvent < delayThresh) {
             return
         }
-        if(validData.userAcceleration.x > sharpTurnThresh) {
+        if(validData.userAcceleration.x > -sharpTurnThresh) {
             print(validData.userAcceleration.x)
             sharpRightTurnCount += 1
             lastEvent = validData.timestamp
             DispatchQueue.main.async {
                 self.lSharpRight.text = String(self.sharpRightTurnCount)
             }
-        } else if(validData.userAcceleration.x < -sharpTurnThresh) {
+        } else if(validData.userAcceleration.x < sharpTurnThresh) {
             print(validData.userAcceleration.x)
             sharpLeftTurnCount += 1
             lastEvent = validData.timestamp
             DispatchQueue.main.async {
                 self.lSharpLeft.text = String(self.sharpLeftTurnCount)
             }
-        } else if(validData.userAcceleration.y > hardAccelThresh) {
+        } else if(validData.userAcceleration.y > -hardAccelThresh) {
             print(validData.userAcceleration.y)
             hardAccelCount += 1
             lastEvent = validData.timestamp
             DispatchQueue.main.async {
                 self.lHardAccel.text = String(self.hardAccelCount)
             }
-        } else if(validData.userAcceleration.y < -hardAccelThresh) {
+        } else if(validData.userAcceleration.y < hardAccelThresh) {
             print(validData.userAcceleration.y)
             hardBrakeCount += 1
             lastEvent = validData.timestamp
