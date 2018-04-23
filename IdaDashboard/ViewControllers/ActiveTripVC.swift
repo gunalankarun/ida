@@ -227,7 +227,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
         
         updateDisplay()
         //lSpeed.text = "\(location.speed) mph"
-        lSpeed.text = "45.0 mph"
+        lSpeed.text = "45 mph"
     }
 }
 
