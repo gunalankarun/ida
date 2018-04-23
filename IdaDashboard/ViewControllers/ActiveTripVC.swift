@@ -167,7 +167,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             let dateStr = formatter.string(from: date)
             let title = "Trip on: " + dateStr
 
-            StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(100)), distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
+            StorageUtil.saveTrip(title: title, start: date, end: date, mpg: Double(arc4random_uniform(100) + 40), score: Int(arc4random_uniform(30))+70, distance: Double(arc4random_uniform(100) + 40), cost: Double(arc4random_uniform(100) + 40),
                                  motion: self.motionList, sharpLeftTurn: self.sharpLeftTurnCount,
                                  sharpRightTurn: self.sharpRightTurnCount,
                                  hardBrake: self.hardBrakeCount, hardAccel: self.hardAccelCount,
