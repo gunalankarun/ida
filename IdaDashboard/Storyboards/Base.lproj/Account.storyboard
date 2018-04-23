@@ -55,8 +55,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw9-3T-th8">
-                                <rect key="frame" x="49" y="471" width="261" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw9-3T-th8">
+                                <rect key="frame" x="49" y="469" width="261" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.0" green="0.59215686274509804" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

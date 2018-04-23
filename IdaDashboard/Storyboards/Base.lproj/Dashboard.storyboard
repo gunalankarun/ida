@@ -299,13 +299,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2L-lO-i5E">
                                         <rect key="frame" x="0.0" y="96" width="375" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trip time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-cd-kDf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-cd-kDf">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.333333333333329" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-He-liq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-He-liq">
                                                 <rect key="frame" x="96.333333333333343" y="0.0" width="278.66666666666663" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -363,28 +363,28 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Mjq-Na-8nJ">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="48"/>
+                                        <rect key="frame" x="0.0" y="200" width="375" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Brake:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIo-f7-ota">
-                                                <rect key="frame" x="0.0" y="0.0" width="169.33333333333334" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="169.33333333333334" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3l-tb-c8J">
-                                                <rect key="frame" x="169.33333333333334" y="0.0" width="19.333333333333343" height="48"/>
+                                                <rect key="frame" x="169.33333333333334" y="0.0" width="19.333333333333343" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Accel:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-My-Afe">
-                                                <rect key="frame" x="188.66666666666663" y="0.0" width="167" height="48"/>
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="167" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1f-rQ-LS1">
-                                                <rect key="frame" x="355.66666666666669" y="0.0" width="19.333333333333314" height="48"/>
+                                                <rect key="frame" x="355.66666666666669" y="0.0" width="19.333333333333314" height="50"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -395,7 +395,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-co-q8w">
-                                        <rect key="frame" x="0.0" y="248" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="250" width="375" height="40"/>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="f2i-bJ-41J"/>
@@ -405,7 +405,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zro-Az-0Do">
-                                        <rect key="frame" x="0.0" y="288" width="375" height="402"/>
+                                        <rect key="frame" x="0.0" y="290" width="375" height="400"/>
                                     </mapView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me4-ud-FZ0">
                                         <rect key="frame" x="0.0" y="690" width="375" height="48"/>
@@ -425,7 +425,6 @@
                                 <constraints>
                                     <constraint firstItem="zro-Az-0Do" firstAttribute="top" secondItem="Vuc-co-q8w" secondAttribute="bottom" id="1Y2-S3-O9t"/>
                                     <constraint firstItem="Me4-ud-FZ0" firstAttribute="top" secondItem="zro-Az-0Do" secondAttribute="bottom" id="Qbd-yG-ZlP"/>
-                                    <constraint firstItem="Vuc-co-q8w" firstAttribute="top" secondItem="Xzh-KL-SJi" secondAttribute="bottom" constant="50" id="RYw-xS-xr4"/>
                                     <constraint firstItem="Vuc-co-q8w" firstAttribute="trailing" secondItem="Mjq-Na-8nJ" secondAttribute="trailing" id="XTo-6q-hRv"/>
                                 </constraints>
                             </stackView>
