@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Seville-Bold.ttf">
+            <string>Seville-Bold</string>
+        </array>
         <array key="Seville-Regular.ttf">
             <string>Seville-Regular</string>
         </array>
@@ -250,7 +253,7 @@
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2w-cw-3y2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <textAttributes key="titleTextAttributes">
-                                            <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="30"/>
                                             <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </textAttributes>
                                         <items>
@@ -261,20 +264,20 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgE-Mc-nGu" userLabel="Current speed:">
-                                                <rect key="frame" x="8" y="8" width="75.333333333333329" height="34"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="8" y="8" width="76" height="34"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1F5-ld-r3n">
-                                                <rect key="frame" x="143.66666666666666" y="8" width="13.666666666666657" height="34"/>
+                                                <rect key="frame" x="144" y="8" width="13.666666666666657" height="34"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-45-pzw">
-                                                <rect key="frame" x="205.33333333333334" y="8" width="100.33333333333334" height="34"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="205" y="8" width="101" height="34"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -301,13 +304,13 @@
                                         <rect key="frame" x="0.0" y="96" width="375" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-cd-kDf">
-                                                <rect key="frame" x="8" y="8" width="96.333333333333329" height="34"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="8" y="8" width="98.333333333333329" height="34"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-He-liq">
-                                                <rect key="frame" x="104.33333333333334" y="8" width="262.66666666666663" height="34"/>
+                                                <rect key="frame" x="106.33333333333334" y="8" width="260.66666666666663" height="34"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -329,25 +332,25 @@
                                         <rect key="frame" x="0.0" y="148" width="375" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharp Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTH-wv-tRU">
-                                                <rect key="frame" x="8.0000000000000071" y="8" width="112.66666666666669" height="34"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="7.9999999999999929" y="8" width="115.33333333333331" height="34"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-Lv-r5e">
-                                                <rect key="frame" x="156" y="8" width="13.666666666666657" height="34"/>
+                                                <rect key="frame" x="154" y="8" width="13.666666666666657" height="34"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharp Right:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi7-Cx-rex">
-                                                <rect key="frame" x="193" y="8" width="137" height="34"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="187.33333333333337" y="8" width="138" height="34"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbc-5z-dLz">
-                                                <rect key="frame" x="353.33333333333331" y="8" width="13.666666666666686" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0   " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbc-5z-dLz">
+                                                <rect key="frame" x="336" y="8" width="31" height="34"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -369,20 +372,20 @@
                                         <rect key="frame" x="0.0" y="200" width="375" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Brake:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIo-f7-ota">
-                                                <rect key="frame" x="7.9999999999999929" y="8" width="119.33333333333331" height="32"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="8.0000000000000071" y="8" width="119.66666666666669" height="32"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3l-tb-c8J">
-                                                <rect key="frame" x="153" y="8" width="13.666666666666657" height="32"/>
+                                                <rect key="frame" x="153.33333333333334" y="8" width="13.666666666666657" height="32"/>
                                                 <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Accel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-My-Afe">
-                                                <rect key="frame" x="192.66666666666666" y="8" width="123.33333333333334" height="32"/>
-                                                <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="24"/>
+                                                <rect key="frame" x="192.33333333333334" y="8" width="123.66666666666666" height="32"/>
+                                                <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="24"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.60392156860000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -404,7 +407,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="f2i-bJ-41J"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Seville-Regular" family="Seville" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Seville-Bold" family="Seville" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
