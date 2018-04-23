@@ -141,8 +141,7 @@ class ActiveTripVC: UIViewController, CLLocationManagerDelegate {
             DispatchQueue.main.async {
                 self.lSharpLeft.text = String(self.sharpLeftTurnCount)
             }
-        }
-        else if(validData.userAcceleration.y > hardAccelThresh) {
+        } else if(validData.userAcceleration.y > hardAccelThresh) {
             print(validData.userAcceleration.y)
             hardAccelCount += 1
             lastEvent = validData.timestamp
