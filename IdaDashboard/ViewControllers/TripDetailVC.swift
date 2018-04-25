@@ -30,7 +30,7 @@ class TripDetailVC: UIViewController, MKMapViewDelegate {
         // Set up views if editing an existing Trip.
         if let trip = trip {
             tripScoreLabel.text   = String(trip.score)
-            tripDistanceLabel.text = String(trip.distance)
+            tripDistanceLabel.text = String(Int(trip.distance)) + " mi."
             tripCostLabel.text = "$" + String(trip.cost)
             
             // set up map

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IwI-LO-5Ap">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IwI-LO-5Ap">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -180,8 +180,11 @@
                                             <constraint firstAttribute="height" constant="1" id="cUr-e6-1et"/>
                                         </constraints>
                                     </view>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v5q-DF-aTK">
+                                        <rect key="frame" x="0.0" y="93.666666666666629" width="359" height="149.33333333333337"/>
+                                    </mapView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qYd-FE-wFB">
-                                        <rect key="frame" x="0.0" y="93.666666666666657" width="359" height="173.99999999999997"/>
+                                        <rect key="frame" x="0.0" y="251" width="359" height="174"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acceleration Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-CC-2rj">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
@@ -205,14 +208,14 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONJ-26-HlB">
-                                        <rect key="frame" x="0.0" y="275.66666666666669" width="359" height="1"/>
+                                        <rect key="frame" x="0.0" y="433" width="359" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="CI9-rY-li6"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="deP-B6-GSp">
-                                        <rect key="frame" x="0.0" y="284.66666666666669" width="359" height="174"/>
+                                        <rect key="frame" x="0.0" y="442" width="359" height="174"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel Economy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko5-UG-5eQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
@@ -236,15 +239,12 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8L-JT-caS">
-                                        <rect key="frame" x="0.0" y="466.66666666666663" width="359" height="1"/>
+                                        <rect key="frame" x="0.0" y="624" width="359" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="W81-Sj-5Qk"/>
                                         </constraints>
                                     </view>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v5q-DF-aTK">
-                                        <rect key="frame" x="0.0" y="475.66666666666657" width="359" height="149.33333333333331"/>
-                                    </mapView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vnX-cS-33V" secondAttribute="trailing" id="Kpm-uv-hHW"/>
